@@ -1,0 +1,33 @@
+.homepage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    width: 50%;
+}
+.hero {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    height: 650px;
+    object-fit: cover;
+}
+.secondSec {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.imgPreview img {
+    height: 300px;
+    width: 300px;
+}
