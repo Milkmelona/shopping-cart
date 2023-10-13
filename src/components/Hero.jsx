@@ -2,6 +2,7 @@ import React from "react";
 import Flickity from "react-flickity-component";
 import ProgressiveImage from "react-progressive-graceful-image";
 import heroImages from "../data/heroData";
+import "../styles/hero.scss"
 
 function Hero(){
     const flickityOptions = {
@@ -16,18 +17,16 @@ function Hero(){
     return(
         <Flickity options={flickityOptions} className="hero" elementType="section">
         {heroImages.map((item)=> (
-            <div key={item.id} className={`heroImg-${item.id}`}>
+            <div key={item.id} className='hero-item'>
                 <ProgressiveImage 
                 src={item.src}
                 placeholder={item.compSrc}
                 >
-                    {(src, loading) => (
+                    {(src) => (
                         <img
                         src = {src}
                         alt = {item.alt}
-                        className = {`heroImg-${item.id}`}
-                        style={{ filter: loading ? 'blur(20px)' : 'none',
-                        transition: 'filter 0.5s ease-in-out'}}
+                        className = {'hero-item-img'}
                         ></img>
                     )}
                 </ProgressiveImage>

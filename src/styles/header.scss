@@ -1,0 +1,42 @@
+@import './utils';
+
+.header {
+    @include flexCenter(column, center, center);
+    
+    &__top {
+        @include flexCenter(row, center, center);
+        width: 100%;
+        position: relative;
+    }
+    &__bottom {
+        width: 100%;
+    }
+    &__list {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 20px;
+        @include flexCenter(row, center, center);
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    &__btn {
+        border: none;
+        outline: none;
+        background-color: white;
+    }
+}
+.navBar {
+    @include flexCenter(row, center, center);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    list-style-type: none;
+    margin: 0;
+}

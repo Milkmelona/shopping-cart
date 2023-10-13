@@ -11,10 +11,13 @@
   },
   "dependencies": {
     "flickity": "^2.3.0",
+    "framer-motion": "^10.16.4",
+    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-flickity-component": "^4.0.6",
-    "react-progressive-graceful-image": "^0.7.0"
+    "react-progressive-graceful-image": "^0.7.0",
+    "react-router-dom": "^6.16.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
@@ -24,6 +27,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "sass": "^1.69.3",
     "vite": "^4.4.5"
   }
 }
