@@ -9,7 +9,7 @@ function Hero(){
         fade: true,
         wrapAround: true,
         initialIndex: 0,
-        autoPlay: 15000,
+        autoPlay: 13000,
         pauseAutoPlayOnHover: false,
     }
 
@@ -22,11 +22,13 @@ function Hero(){
                 src={item.src}
                 placeholder={item.compSrc}
                 >
-                    {(src) => (
+                    {(src, loading) => (
                         <img
                         src = {src}
                         alt = {item.alt}
-                        className = {'hero-item-img'}
+                        className = {`hero-item__img ${
+                            loading && 'img-loading'}`
+                        }
                         ></img>
                     )}
                 </ProgressiveImage>
