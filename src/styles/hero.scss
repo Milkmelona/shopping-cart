@@ -3,7 +3,6 @@
     left: 50%;
     transform: translate(-50%);
     overflow: hidden;
-    width:100%;
 
   &-item {
     width: 100%;
@@ -27,9 +26,8 @@
       }
   }
   }
-}
 
-.flickity {
+  .flickity {
 
     &-button {
         --offset-side: 10px;
@@ -92,3 +90,5 @@
         }
       }
 }
+}
+
