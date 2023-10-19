@@ -19,20 +19,23 @@ const featuredImgs = [
         src: featured1,
         compSrc: compFeatured1,
         alt: "heart-shaped pearl earrings", 
+        name: "Betelgeuse",
         price: "3000"
     },
     {
         id: "featured-img-2",
         src: featured2,
         compSrc: compFeatured2,
-        alt: "necklace with a ring pendant with floral details", 
+        alt: "necklace with a ring pendant with floral details",
+        name: "Cepheus", 
         price: "5500"
     },
     {
         id: "featured-img-3",
         src: featured3,
         compSrc: compFeatured3,
-        alt: "gold star-shaped earrings", 
+        alt: "gold star-shaped earrings",
+        name: "Mira", 
         price: "2500"
     },
     {
@@ -40,20 +43,23 @@ const featuredImgs = [
         src: featured4,
         compSrc: compFeatured4,
         alt: "gold doubled-chain necklace", 
+        name: "Capella",
         price: "6500"
     },
     {
         id: "featured-img-5",
         src: featured5,
         compSrc: compFeatured5,
-        alt: "gold doubled-chain necklace with a crescent moon pendant", 
+        alt: "gold doubled-chain necklace with a crescent moon pendant",
+        name: "Albireo", 
         price: "6500"
     },
     {
         id: "featured-img-6",
         src: featured6,
         compSrc: compFeatured6,
-        alt: "gold twisted earrings", 
+        alt: "gold twisted earrings",
+        name: "Carina", 
         price: "6500"
     }
 ]

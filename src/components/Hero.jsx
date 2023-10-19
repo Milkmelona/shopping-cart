@@ -9,7 +9,7 @@ function Hero(){
         fade: true,
         wrapAround: true,
         initialIndex: 0,
-        autoPlay: 13000,
+        autoPlay: 15000,
         pauseAutoPlayOnHover: false,
     }
 
@@ -27,7 +27,7 @@ function Hero(){
                         src = {src}
                         alt = {item.alt}
                         className = {`hero-item__img ${
-                            loading && 'img-loading'}`
+                            loading && 'img--loading'}`
                         }
                         ></img>
                     )}

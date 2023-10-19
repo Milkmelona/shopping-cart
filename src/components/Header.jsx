@@ -9,7 +9,7 @@ return (
     <div className="header">
         <div className="header__top">
         <div className="header__logo">
-            <h1>Aglea</h1>
+            <h1>Methuselah</h1>
         </div>
         <div className="header__list">
             <HeaderIcon

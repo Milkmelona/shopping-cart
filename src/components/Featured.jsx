@@ -16,7 +16,7 @@ function Featured(){
 
     return(
         <section className="feature">
-        <h3 className="feature__title">Featured Collection</h3>
+        <h3 className="feature__title">New Arrivals</h3>
         <Flickity options={flickityOptions} className="feature__products" elementType="div">
         {featuredImgs.map((item)=> (
             <div key={item.id} className='feature-item'>
@@ -32,7 +32,7 @@ function Featured(){
                         src = {src}
                         alt = {item.alt}
                         className = {`feature-item__img ${
-                            loading && 'img-loading'}`
+                            loading && 'img--loading'}`
                         }
                         loading = "lazy"
                         ></img>
