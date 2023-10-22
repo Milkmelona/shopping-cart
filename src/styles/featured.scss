@@ -3,7 +3,7 @@
 .feature {
     position: relative;
     overflow-x: hidden;
-    width:100%;
+    width:80%;
 
     padding-bottom: 50px;
 
@@ -73,10 +73,18 @@
         &:focus {
           border-color: var(--color-primary);
         }
+    }
+    &__title {
+      width: 100%;
+      margin: 0;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      text-align: center;
+      letter-spacing: 1px;
+      word-break: break-all;
+    }
 
   }
-  }
-
   .flickity {
 
     &-viewport {

@@ -1,0 +1,64 @@
+@import "./utils";
+
+.fc {
+    display: grid;
+    grid-template-columns: 40% auto;
+    margin: 50px 0;
+    column-gap: 35px;
+
+    &__container{
+        @include flexCenter(column, center, flex-start);
+
+    }
+
+    &__text-wrapper {
+        @include flexCenter(column, center, flex-start);
+        // position: absolute;
+    }
+    & p {
+        font-size: 23px;
+    }
+
+    &__img {
+        
+            width: 100%;
+    }
+
+    &__title {
+        margin-block: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &-collection {
+            font-size: 32px;
+            margin: 0;
+        }
+    }
+    &__img-wrapper {
+        @include flexCenter(row, center, center);
+        border: 7px solid var(--color-grey-light-2);
+        width: 100%;
+        
+
+        &.img--loading {
+          filter: brightness(80%) grayscale(30%) blur(12px);
+          scale: 1.05;
+        }
+
+        & img {
+        
+        transition: 300ms linear;  
+        
+        &:hover {
+        transform: scale(1.025);
+        }}
+        
+    
+        &:hover,
+        &:focus {
+          border-color: var(--color-primary);
+        }
+    }
+
+}

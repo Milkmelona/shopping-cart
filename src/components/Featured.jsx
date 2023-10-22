@@ -39,6 +39,8 @@ function Featured(){
                     )}
                 </ProgressiveImage>
                 </Imgwrapper>
+                <h3 className="feature-item__title">{item.name}</h3>
+                <div className="feature-item__price">{item.price}</div>
             </div>
         ))}
         </Flickity>
