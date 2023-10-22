@@ -1,0 +1,12 @@
+button {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 13px 18px;
+
+    &:hover,
+    &:active {
+        background: #e2ac8d;
+        outline: none;
+    }
+}

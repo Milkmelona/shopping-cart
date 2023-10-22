@@ -4,6 +4,7 @@ import img1 from "../assets/Unsplash Images/featured-collection-img-1.jpg"
 import img1Comp from "../assets/Compressed Unsplash Images/featured-collection-img-1-min.jpg"
 import img2 from  "../assets/Unsplash Images/featured-collection-img-2.jpg"
 import img2Comp from  "../assets/Compressed Unsplash Images/featured-collection-img-2-min.jpg"
+import Button from "./Buttons";
 
 import Imgwrapper from "./Imagewrapper";
 import "../styles/featuredColl.scss"
@@ -30,17 +31,12 @@ function FeaturedCollection(){
                     )}
               </ProgressiveImage>
               </Imgwrapper>
-              <div className="fc__text-wrapper">
-              <h4 className="fc__title-collection">Juno</h4>
-              <p>Each handcrafted jewel in this collection is a radiant testament to enduring beauty,
-                 making it the ideal choice for those seeking to adorn themselves with a touch of eternal grace.</p> 
-             </div>
         </div>
         <div className="fc__container">
               <div className="fc__text-wrapper">
               <h4 className="fc__title-collection">Gaia</h4>
               <p className="fc__desc2">Crafted from ethically sourced gemstones and sustainable materials,
-                 this collection embodies the harmony between art and the environment, allowing you to wear the elegance of nature with every piece</p>
+                 this collection embodies the harmony between art and the environment, allowing you to wear the elegance of nature with every piece.</p>
               </div>
               <Imgwrapper className="fc__img-wrapper">
               <ProgressiveImage
@@ -59,6 +55,12 @@ function FeaturedCollection(){
                     )}
               </ProgressiveImage>
               </Imgwrapper>
+              <Button
+              text = {"Show Collection"}
+              color = {"#a1b4bf"}
+              hoverColor = {"#e2ac8d"}
+              fontSize = {20}
+              />
         </div>
 
         </section>

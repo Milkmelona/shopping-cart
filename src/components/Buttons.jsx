@@ -1,11 +1,16 @@
+import "../styles/buttons.scss";
+
 function Button({
     text,
-    color
+    color,
+    fontSize
 }){
     const btnstyle = {
             backgroundColor : color,
-            fontFamily: 'Bubblegum Sans, sans-serif'
+            fontFamily: 'Bubblegum Sans, sans-serif',
+            fontSize: fontSize,
     }
+
 return(
     <button style={btnstyle}>
         {text}
