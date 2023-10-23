@@ -17,6 +17,7 @@
 
     &__text-wrapper {
         @include flexCenter(column, center, flex-start);
+        text-align: justify;
         // position: absolute;
     }
     & p {
@@ -24,8 +25,12 @@
     }
 
     &__img {
-        
-            width: 100%;
+        width: 100%;
+
+        &.img--loading {
+            filter: brightness(80%) grayscale(30%) blur(12px);
+            scale: 1.05;
+            }
     }
 
     &__title {
@@ -44,11 +49,6 @@
         border: 7px solid var(--color-grey-light-2);
         width: 100%;
         
-
-        &.img--loading {
-          filter: brightness(80%) grayscale(30%) blur(12px);
-          scale: 1.05;
-        }
 
         & img {
         

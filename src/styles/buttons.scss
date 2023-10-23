@@ -4,9 +4,10 @@ button {
     cursor: pointer;
     padding: 13px 18px;
 
+
     &:hover,
     &:active {
-        background: #e2ac8d;
         outline: none;
+        scale: 1.05;
     }
 }

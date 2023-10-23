@@ -1,0 +1,45 @@
+@import './utils';
+
+.desc {
+    @include flexCenter(column, flex-start, center);
+
+    &__title {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.6vw;
+    }
+
+    &__container-main {
+        @include flexCenter(row, center, center);
+        gap: 50px;
+    }
+
+    &__container {
+        @include flexCenter(row, center, center);
+        gap: 20px;
+        text-align: justify;
+
+        &-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.2em;
+        }
+
+        p {
+            font-size: 1.2vw;
+            line-height: 1.5;
+            letter-spacing: 1.5px;
+        }
+        &-wrapper {
+            @include flexCenter(column, flex-end, center);
+            & img {
+                width: 100px;
+                height: 100px;
+                filter: invert(81%) sepia(17%) saturate(1057%) hue-rotate(326deg) brightness(93%) contrast(90%);
+                
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,52 @@
+@import './utils';
+
+.footer {
+    @include flexCenter(column, center, center);
+    width:100%;
+
+    &__emailForm {
+    @include flexCenter(column, center, center);
+    width: 100%;
+
+        & h3 {
+            font-size: 1.3vw;
+        }
+        &-wrapper {
+            @include flexCenter(row, center, center);
+            gap: 20px;
+            font-size: 1.1vw;
+
+            & input {
+                font-size: 1.1vw;
+                border-radius: 8px;
+                height: 38px;
+                text-align: left;
+            }
+        }
+        & img {   
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        @include flexCenter(row, center, center);
+
+        &-right {
+            @include flexCenter(column, center, center);
+
+            &.wrapper {
+                @include flexCenter(row, center, center);
+            }
+
+            &.wrapper-contact {
+                @include flexCenter(column, center, center);
+
+                &img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+        }
+    }
+}

@@ -27,7 +27,7 @@ function FeaturedCollection(){
                             loading && 'img--loading'}`
                         }
                         loading = "lazy"
-                        ></img>
+                        />
                     )}
               </ProgressiveImage>
               </Imgwrapper>
@@ -51,7 +51,7 @@ function FeaturedCollection(){
                             loading && 'img--loading'}`
                         }
                         loading = "lazy"
-                        ></img>
+                        />
                     )}
               </ProgressiveImage>
               </Imgwrapper>

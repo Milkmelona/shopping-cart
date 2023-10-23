@@ -5,6 +5,7 @@ import Button from "../components/Buttons";
 import Hero from "../components/Hero";
 import Featured from "../components/Featured";
 import FeaturedCollection from "../components/FeaturedColl";
+import Description from "../components/Description";
 
 function Homepage(){
 return(
@@ -12,6 +13,7 @@ return(
         <Hero/>
         <FeaturedCollection/>
         <Featured/>
+        <Description/>
     </div>
 )
 

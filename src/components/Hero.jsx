@@ -29,7 +29,7 @@ function Hero(){
                         className = {`hero-item__img ${
                             loading && 'img--loading'}`
                         }
-                        ></img>
+                        />
                     )}
                 </ProgressiveImage>
             </div>

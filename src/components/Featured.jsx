@@ -35,7 +35,7 @@ function Featured(){
                             loading && 'img--loading'}`
                         }
                         loading = "lazy"
-                        ></img>
+                        />
                     )}
                 </ProgressiveImage>
                 </Imgwrapper>
