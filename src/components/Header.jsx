@@ -1,33 +1,11 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import "../styles/header.scss"
 import HeaderIcon from "./HeaderButtons";
 import NavBar from "./Navigation";
 
 function Header(){
-    const[IsSticky, setIsSticky] = useState(false)
-
-    useEffect(() => {
-
-        const handleScroll = () => {
-
-            if (window.pageYOffset > 0) {
-                setIsSticky(true)
-            }
-            else {
-                setIsSticky(false)
-            }
-        }
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll)
-        }
-    }, [])
-
-
 return (
-    <div className={`header ${IsSticky && "sticky"}`}>
+    <div className="header">
         <div className="header__top">
         <div className="header__logo">
             <h1>Methuselah</h1>

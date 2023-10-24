@@ -1,6 +1,8 @@
 import React from "react";
+import HeaderIcon from "./HeaderButtons";
+import "../styles/headerSticky.scss"
 
-function NavigationSticky(){
+function HeaderSticky(){
 
     return(
          // <motion.nav
@@ -42,12 +44,38 @@ function NavigationSticky(){
     // </ul>
              
     //</motion.nav>
-    
-    <ul className="navBar">
+    <div className="headerSticky">
+    <span>Methuselah</span>
+    <ul className="headerSticky__list">
     <li>Collection</li>
     <li>Look Book</li>
     <li>About Us</li>
     <li>FAQs</li>
-  </ul>
+    </ul>
+    <div className="headerSticky__icons">
+     <HeaderIcon
+            src={"../src/assets/search.svg"} 
+            alt={"search"} 
+            btnClass={"headerSticky__icon search"}
+            />
+            <HeaderIcon
+            src={"../src/assets/account.svg"} 
+            alt={"account"} 
+            btnClass={"headerSticky__icon account"}
+            />
+            <HeaderIcon
+            src={"../src/assets/heart.svg"} 
+            alt={"wishlist"} 
+            btnClass={"headerSticky__icon heart"}
+            />
+            <HeaderIcon
+            src={"../src/assets/cart.svg"} 
+            alt={"cart"} 
+            btnClass={"headerSticky__icon cart"}
+            />
+     </div>
+     </div>
     )
 }
+
+export default HeaderSticky;

@@ -4,12 +4,6 @@
     @include flexCenter(column, center, center);
     width: 100%;
 
-    &.sticky {
-        position: sticky;
-        top: 0;
-        z-index: 100;
-        }
-
     &__top {
         @include flexCenter(row, center, center);
         width: 100%;
@@ -38,12 +32,10 @@
 }
 .navBar {
     @include flexCenter(row, center, center);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
     font-size: 20px;
     padding: 10px 0;
     list-style-type: none;
     margin: 0;
+    background-color: #d5ccbb;
 }

@@ -19,39 +19,45 @@ const heroImages = [
         id: "hero-img-1",
         src: hero1,
         compSrc: compressedHero1,
-        alt: "a woman showing her left hand wearing multiple accessories" 
+        alt: "a woman showing her left hand wearing multiple accessories",
+        desc:  "Shine with the stars in our celestial-inspired necklace, a celestial touch to your style."
     },
 
     {
         id: "hero-img-2",
         src: hero2,
         compSrc: compressedHero2,
-        alt: "a woman's neck wearing multiple accessories"
+        alt: "a woman's neck wearing multiple accessories",
+        desc: "Unveil the rare beauty of nature with our pearl collection, a tribute to elegance and femininity."
     },
 
     {
         id: "hero-img-3",
         src: hero3,
         compSrc: compressedHero3,
-        alt: "bracelets and earings spread on a silk fabric"
+        alt: "bracelets and earings spread on a silk fabric",
+        desc: "Embrace the timeless elegance of our lustrous pearl bracelet, a symbol of refined beauty and sophistication."
     },
     {
         id: "hero-img-4",
         src: hero4,
         compSrc: compressedHero4,
-        alt: "ring on a hand on the sand"
+        alt: "ring on a hand on the sand",
+        desc: "Channel the spirit of the ocean with our diamond ring, a symbol of serenity and grace."
     },
     {
         id: "hero-img-5",
         src: hero5,
         compSrc: compressedHero5,
-        alt: "ring on a hand on the sand"
+        alt: "ring on a hand on the sand",
+        desc: "Elegance meets luxury with our timeless diamond-studded bangle, a statement piece for all occasions."
     },
     {
         id: "hero-img-6",
         src: hero6,
         compSrc: compressedHero6,
-        alt: "ring on a hand on the sand"
+        alt: "woman with multiple bracelets and rings",
+        desc: "Elevate your wrist with the allure of our exquisite gold bracelets, the perfect blend of luxury and style."
     },
 ]
 
