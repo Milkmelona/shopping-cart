@@ -46,7 +46,7 @@ function FeaturedCollection(){
                     {(src, loading) => (
                         <img
                         src = {src}
-                        alt = "Woman in a white dress wearing jewelries"
+                        alt = "Gold earrings on a blue background"
                         className = {`fc__img img2 ${
                             loading && 'img--loading'}`
                         }
@@ -60,6 +60,8 @@ function FeaturedCollection(){
               color = {"#a1b4bf"}
               hoverColor = {"#e2ac8d"}
               fontSize = {20}
+              type={"button"}
+              className = {"fc_btn"}
               />
         </div>
 
