@@ -3,8 +3,10 @@ import { useState, useEffect } from 'react'
 import './App.scss'
 import Homepage from './pages/Homepage'
 import Header from './components/Header'
-import Footer from './pages/Footer'
+import Footer from "../src/components/Footer"
 import HeaderSticky from './components/Header-sticky'
+import Collection from './pages/Collectionpage'
+import Shop from './pages/Shop'
 
 function App() {
   
@@ -34,7 +36,7 @@ function App() {
       <HeaderSticky/>
       ) : (
       <Header/>)}
-      <Homepage/>
+      <Shop/>
       <Footer/>
     </>
   )

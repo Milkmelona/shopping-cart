@@ -47,10 +47,10 @@ function HeaderSticky(){
     <div className="headerSticky">
     <span>Methuselah</span>
     <ul className="headerSticky__list">
-    <li>Collection</li>
-    <li>Look Book</li>
-    <li>About Us</li>
-    <li>FAQs</li>
+        <li>Shop</li>
+        <li>Collection</li>
+        <li>About Us</li>
+        <li>FAQs</li>
     </ul>
     <div className="headerSticky__icons">
      <HeaderIcon

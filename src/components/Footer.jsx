@@ -4,7 +4,7 @@ import "../styles/footer.scss"
 import Phone from "../assets/phone.svg"
 import Mail from "../assets/mail.svg"
 import Chat from "../assets/chat.svg"
-import Button from "../components/Buttons"
+import Button from "./Buttons"
 
 function Footer(){
     return(

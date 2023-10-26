@@ -12,7 +12,6 @@ function Button({
             fontFamily: 'Bubblegum Sans, sans-serif',
             fontSize: fontSize + 'px',
     }
-
 return(
     <button style={btnstyle} type={type} className={className}>
         {text}

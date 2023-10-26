@@ -45,8 +45,8 @@ function NavBar(){
     //</motion.nav>
     
     <ul className="navBar">
+      <li>Shop</li>
       <li>Collection</li>
-      <li>Look Book</li>
       <li>About Us</li>
       <li>FAQs</li>
     </ul>
