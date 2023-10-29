@@ -12,6 +12,7 @@ import img11 from "../assets/Products/product-img-11.jpg"
 import img12 from "../assets/Products/product-img-12.jpg"
 import img13 from "../assets/Products/product-img-13.jpg"
 import img14 from "../assets/Products/product-img-14.jpg"
+import img15 from "../assets/Products/product-img-15.jpg"
 
 import img1Comp from "../assets/Compressed Unsplash Images/product-img-1-min.jpg"
 import img2Comp from "../assets/Compressed Unsplash Images/product-img-2-min.jpg"
@@ -27,7 +28,7 @@ import img11Comp from "../assets/Compressed Unsplash Images/product-img-11-min.j
 import img12Comp from "../assets/Compressed Unsplash Images/product-img-12-min.jpg"
 import img13Comp from "../assets/Compressed Unsplash Images/product-img-13-min.jpg"
 import img14Comp from "../assets/Compressed Unsplash Images/product-img-14-min.jpg"
-
+import img15Comp from "../assets/Compressed Unsplash Images/product-img-15-min.jpg"
 
 const products = [
     {
@@ -141,9 +142,15 @@ const products = [
         price: "16500",
         alt: "Studded silver bracelet",
         id: "product-img-14"
+    },
+    {
+        name: "Stella",
+        src: img15,
+        compSrc: img15Comp,
+        price: "16500",
+        alt: "Gold chained earrings",
+        id: "product-img-15"
     }
-
-
 ]
 
 export default products

@@ -4,3 +4,32 @@
     align-items: $alignItem;
     justify-content: $justifyContent;
 }
+
+$breakpoints: (
+  xs: 320px,
+  sm: 600px,
+  md: 700px,
+  lg: 900px,
+  xl: 1000px,
+  xxl: 1200px,
+  xxxl: 1500px
+);
+
+@mixin breakpoint($key, $minmax: max) {
+    $size: map-get($breakpoints, $key);
+  
+    @if ($size) {
+      @media only screen and (#{$minmax}-width: $size) {
+        @content;
+      }
+    } @else {
+      @error '`#{$key}` does not exist in the $breakpoints';
+    }
+  }
+
+// Placeholders
+
+%image-loading {
+    filter: brightness(80%) grayscale(30%) blur(12px);
+    scale: 1.05;
+}
