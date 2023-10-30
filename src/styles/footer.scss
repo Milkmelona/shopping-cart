@@ -2,7 +2,8 @@
 
 .footer {
     @include flexCenter(column, center, center);
-    width:100%;
+    width: 100%;
+    overflow-x: hidden;
 
     &__emailForm {
     @include flexCenter(column, center, center);

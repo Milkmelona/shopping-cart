@@ -1,16 +1,38 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/header.scss"
 import HeaderIcon from "./HeaderButtons";
 import NavBar from "./Navigation";
 
-function Header(){
+function Header()
+
+    const [isMenuVisible, setIsMenuVisible] = useState(false)
+        
+    function handleDropDown(){
+        setIsMenuVisible(true)
+    }
+
+       
+    
 return (
     <div className="header">
         <div className="header__top">
         <div className="header__logo">
-            <h1>Methuselah</h1>
+        <HeaderIcon
+            src={"../src/assets/methuselah-logo.svg"}
+            alt={"methuselah logo"}
+            btnClass={"header__icon logo"}
+        />
         </div>
-        <div className="header__list">
+        <h1>Methuselah</h1>
+        <HeaderIcon
+            src={"../src/assets/menu.svg"}
+            alt={"menu"}
+            btnClass={"header__icon menu"}
+            onClick = {handleDropDown}
+        />
+        </div>
+        {isMenuVisible && <div className="header__list">
             <HeaderIcon
             src={"../src/assets/search.svg"} 
             alt={"search"} 
@@ -31,13 +53,11 @@ return (
             alt={"cart"} 
             btnClass={"header__icon cart"}
             />
-        </div>
-        </div>
+        </div>}
         <div className="header__bottom">
        <NavBar/>
         </div>
     </div>
 )
-}
 
 export default Header

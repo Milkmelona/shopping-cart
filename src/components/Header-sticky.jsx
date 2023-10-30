@@ -45,19 +45,13 @@ function HeaderSticky(){
              
     //</motion.nav>
     <div className="headerSticky">
-    <span>Methuselah</span>
-    <ul className="headerSticky__list">
+    {/* <ul className="headerSticky__list">
         <li>Shop</li>
         <li>Collection</li>
         <li>About Us</li>
         <li>FAQs</li>
-    </ul>
-    <div className="headerSticky__icons">
-     <HeaderIcon
-            src={"../src/assets/search.svg"} 
-            alt={"search"} 
-            btnClass={"headerSticky__icon search"}
-            />
+    </ul> */}
+    <div className="headerSticky__icons left">
             <HeaderIcon
             src={"../src/assets/account.svg"} 
             alt={"account"} 
@@ -73,6 +67,25 @@ function HeaderSticky(){
             alt={"cart"} 
             btnClass={"headerSticky__icon cart"}
             />
+     </div>
+     <div className="headerSticky__logo">
+        <HeaderIcon
+            src={"../src/assets/methuselah-logo.svg"}
+            alt={"methuselah logo"}
+            btnClass={"headerSticky__icon logo"}
+        />
+    </div>
+     <div className="headerSticky__icons right">
+            <HeaderIcon
+            src={"../src/assets/search.svg"} 
+            alt={"search"} 
+            btnClass={"headerSticky__icon search"}
+            />
+            <HeaderIcon
+            src={"../src/assets/menu.svg"}
+            alt={"menu"}
+            btnClass={"headerSticky__icon menu"}
+        />
      </div>
      </div>
     )
