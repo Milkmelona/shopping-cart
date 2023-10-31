@@ -11,14 +11,29 @@
     & span {
         font-size: 30px
     }
-
     &__list {
-        @include flexCenter(row, center, center);
-        gap: 15px;
-        font-size: 20px;
-        padding: 10px 0;
-        list-style-type: none;
+        @include flexCenter(column, center, center);
+        position:absolute;
+        width: 100%;
         margin: 0;
+        list-style-type: none;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #cb9d90;
+        font-size: 1.0rem;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        padding-left: 0;
+
+        & li {
+            padding-block: 20px;
+            padding-left: 12px;
+            margin-inline: 14px;
+            border-bottom: 1px solid black;
+            width: 90%;
+        }
+
     }
 
     &__icons {

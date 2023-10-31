@@ -17,6 +17,7 @@
     &__menu-wrapper{
         position: relative;
     }
+
     &__list {
         @include flexCenter(column, center, center);
         position: absolute;

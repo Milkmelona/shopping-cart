@@ -1,8 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import HeaderIcon from "./HeaderButtons";
 import "../styles/headerSticky.scss"
 
 function HeaderSticky(){
+
+    const[isMenuVisible, setIsMenuVisible] = useState(false);
+
+    function handleDropDrown(){
+        setIsMenuVisible(!isMenuVisible);
+    }
 
     return(
          // <motion.nav
@@ -45,12 +52,6 @@ function HeaderSticky(){
              
     //</motion.nav>
     <div className="headerSticky">
-    {/* <ul className="headerSticky__list">
-        <li>Shop</li>
-        <li>Collection</li>
-        <li>About Us</li>
-        <li>FAQs</li>
-    </ul> */}
     <div className="headerSticky__icons left">
             <HeaderIcon
             src={"../src/assets/account.svg"} 
@@ -85,8 +86,15 @@ function HeaderSticky(){
             src={"../src/assets/menu.svg"}
             alt={"menu"}
             btnClass={"headerSticky__icon menu"}
-        />
+            onClick={handleDropDrown}
+            />
      </div>
+     {isMenuVisible && <ul className="headerSticky__list">
+                <li>Shop</li>
+                <li>Collection</li>
+                <li>About Us</li>
+                <li>FAQs</li>
+            </ul>}
      </div>
     )
 }
