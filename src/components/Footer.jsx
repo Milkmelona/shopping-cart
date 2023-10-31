@@ -12,7 +12,7 @@ function Footer(){
             <div className="footer__emailForm">
                 <h3>Stay in the Sparkling Loop!</h3>
                 <div className="footer__emailForm-wrapper">
-                <span>Get 5% off on selected items by subscribing to our Newsletter</span>
+                <p>Get 5% off on selected items by subscribing to our Newsletter</p>
                 <input type="email" 
                 placeholder="Enter your email address"
                 id="email"
@@ -42,15 +42,15 @@ function Footer(){
                     <div className="footer__info-right-wrapper">
                         <div className="footer__info-contact">
                             <img src= {Phone} alt="Phone logo" className="footer__info-contact-icon"/>
-                            <span>(000)-SELAH</span>
+                            <span>(000)<br/>-SELAH</span>
                         </div>
                         <div className="footer__info-contact">
                             <img src= {Mail} alt="Mail logo" className="footer__info-contact-icon"/>
-                            <span>support@methuselah.com</span>
+                            <span>support<br/>@methuselah.com</span>
                         </div>
                         <div className="footer__info-contact">
                             <img src= {Chat} alt="Chat logo" className="footer__info-contact-icon"/>
-                            <span>Chat with us</span>
+                            <span>Chat<br/>with us</span>
                         </div>
                     </div>
                 </div>
