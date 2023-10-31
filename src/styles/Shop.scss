@@ -31,9 +31,10 @@
         }
     }
     &__main {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        width: 100%;
+        @include flexCenter(column, center, flex-start);
+        // display: grid;
+        // grid-template-columns: auto 1fr;
+        // width: 100%;
         
         @include breakpoint(xxxl, min) {
             width: 85%;
@@ -52,30 +53,37 @@
 
     &__products {
         display: grid;
-        grid-template-columns: repeat(3, 1fr) ;
-        column-gap: 10px;
-        margin-inline: 60px;
+        grid-template-columns: 1fr ;
+        // column-gap: 10px;
+        
+        margin-inline: 20px;
 
             &-img-wrapper {
                 height: 300px;
+                overflow: hidden;
+                border: 5px solid #cb9d90;
             }
 
             &-item {
-                padding: 8px;
+                
                 margin-inline: 10px;
-                margin-block: 30px;
+                margin-block: 15px;
                 cursor: pointer;
+                flex: 1;
 
 
                 &-desc {
                     text-align: center;
+                    
+                    & h3{
+                        margin: 8px 0;
+                    }
                 }
 
                 &-img {
                     height: 100%;
                     width: 100%;
                     object-fit: cover;
-                    border: 5px solid #cb9d90;
 
                     transition: 300ms linear;  
         

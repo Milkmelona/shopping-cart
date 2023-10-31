@@ -30,8 +30,18 @@ function Shop(){
                 )}
             </ProgressiveImage>
             </section>
-            <div className="shop__main">
-            <ul className="shop__categories">
+            <section className="shop__main">
+                <div className="shop__product-sorter">
+                    <label for="product-sorter">
+                    <select name="product-sorter" id="product-sorter">
+                        <option value="sale">Sale</option>
+                        <option value="recommended">Recommended</option>
+                        <option value="price-ascending">Price: Low to High</option>
+                        <option value="price-descending">Price: High to Low</option>
+                    </select>
+                    </label>
+                </div>
+            {/* <ul className="shop__categories">
                 <li className="shop__categories-selection">New Arrival</li>
                 <li className="shop__categories-selection">Sale!</li>
                 <li className="shop__categories-selection">All Products</li>
@@ -39,9 +49,9 @@ function Shop(){
                 <li className="shop__categories-selection">Bracelet</li>
                 <li className="shop__categories-selection">Necklace</li>
                 <li className="shop__categories-selection">Anklet</li>
-                <li className="shop__categories-selection">Ring</li>
-            </ul>
-            <section className="shop__products">
+                <li className="shop__categories-selection">Ring</li> 
+            </ul>*/}
+            <div className="shop__products">
                 {products.map((product) => (
                     <div className="shop__products-item"  key={product.id}>
                         <div className="shop__products-img-wrapper">
@@ -67,8 +77,8 @@ function Shop(){
                         </div>
                     </div>
                 )) }
-            </section>
             </div>
+            </section>
         </div>
     )
 }
