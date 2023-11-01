@@ -85,21 +85,4 @@
             }
         }
     }
-    &__copyright {
-        @include flexCenter(column, center, center);
-        
-        &-icon{
-            width: 20px;
-            height: 20px;
-        }
-
-        &-top {
-            @include flexCenter(row, center, center);
-            gap: 8px;
-        }
-
-        &-bottom {
-            text-align: center;
-        }
-    }
 }

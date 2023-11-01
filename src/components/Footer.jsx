@@ -55,15 +55,6 @@ function Footer(){
                     </div>
                 </div>
             </div>
-            <div className="footer__copyright">
-                <div className="footer__copyright-top">
-                <img src={githubIcon} alt="Github Icon" className="footer__copyright-icon" />
-                <span>Developed by Bea Austria</span>
-                </div>
-                <p className="footer__copyright-bottom">
-                    &copy; Copyright 2023 Bea Austria. All Rights Reserved.
-                </p>
-            </div>
         </section>
     )
 
