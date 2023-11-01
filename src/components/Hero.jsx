@@ -14,7 +14,6 @@ function Hero(){
         pauseAutoPlayOnHover: false,
     }
 
-
     return(
         <Flickity options={flickityOptions} className="hero" elementType="section">
         {heroImages.map((item)=> (
@@ -41,7 +40,7 @@ function Hero(){
                     <Buttons
                     text = {"Shop Now"}
                     color = {"#c4aeac"}
-                    fontSize ={23}
+                    fontSize ={21}
                     type = {"button"}
                     className = {"hero-item__wrapper-btn"}
                     />
