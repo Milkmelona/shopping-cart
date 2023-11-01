@@ -34,7 +34,7 @@ function FeaturedCollection(){
         </div>
         <div className="fc__container">
               <div className="fc__text-wrapper">
-              <h4 className="fc__title-collection">Gaia</h4>
+              <h4 className="fc__title">Gaia</h4>
               <p className="fc__desc2">Crafted from ethically sourced gemstones and sustainable materials,
                  this collection embodies the harmony between art and the environment, allowing you to wear the elegance of nature with every piece.</p>
               </div>

@@ -1,11 +1,11 @@
 @import "./utils";
 
 .fc {
-    display: grid;
-    grid-template-columns: 40% auto;
+    // display: grid;
+    // grid-template-columns: 40% auto;
     margin: 50px 0;
-    column-gap: 35px;
-    width: 80%;
+    // column-gap: 35px;
+    width: 85%;
 
     position: relative;
     left: 50%;
@@ -20,9 +20,6 @@
         text-align: justify;
         // position: absolute;
     }
-    & p {
-        font-size: 23px;
-    }
 
     &__img {
         width: 100%;
@@ -33,16 +30,18 @@
     }
 
     &__title {
-        margin-block: 40px;
-        text-align: center;
+        letter-spacing: 4px;
         text-transform: uppercase;
-        letter-spacing: 2px;
-
-        &-collection {
-            font-size: 32px;
-            margin: 0;
-        }
+        font-size: 1.4rem;
+        margin-block: 1.1em;
     }
+
+    &__desc2{
+        font-size: 1.2rem;
+        margin-top: 0;
+        text-align: center;
+    }
+
     &__img-wrapper {
         @include flexCenter(row, center, center);
         border: 7px solid var(--color-grey-light-2);
