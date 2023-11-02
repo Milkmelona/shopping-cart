@@ -5,15 +5,26 @@
     padding-inline: 20px;
     margin-block: 30px;
 
+
+
     &__title {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 1.2rem;
+
+        @include breakpoint(md){
+            font-size: 1.5rem;
+        }
+
     }
 
     &__container-main {
         @include flexCenter(column, center, center);
 
+        @include breakpoint(md){
+            margin-inline: 20px;
+        }
+    
     }
 
     &__container {
@@ -28,8 +39,11 @@
 
         p {
             font-size: 1.1rem;
-            // line-height: 1.5;
             letter-spacing: 1.5px;
+
+            @include breakpoint(md){
+                text-align: center;
+            }
         }
         &-wrapper {
             @include flexCenter(column, center, center);

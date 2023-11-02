@@ -39,6 +39,10 @@
     &__icons {
         @include flexCenter(row, center, center);
         gap: 3px;
+
+        @include breakpoint(md){
+            gap: 5px;
+        }
     }
 
     &__icon {
