@@ -39,6 +39,10 @@
         filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(96%) contrast(103%);
         padding: 8px;
 
+        @include breakpoint(md){
+            width: 2.3rem;
+            height: 2.3rem;
+        }
         &.logo {
             margin-left: 8px;
         }
@@ -63,6 +67,10 @@
     list-style-type: none;
     margin: 0;
     background-color: #cb9d90;
+
+    @include breakpoint(md){
+        font-size: 1.5rem;
+    }
 
     & li {
         cursor: pointer;

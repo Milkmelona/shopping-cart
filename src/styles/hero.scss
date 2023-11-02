@@ -34,7 +34,7 @@
     }
 }
   &__wrapper {
-    @include flexCenter(column, center, space-between);
+    @include flexCenter(column, flex-start, space-between);
     width:90%;
     position: absolute;
     bottom: 0;

@@ -1,16 +1,21 @@
 @import "./utils";
 
 .fc {
-    // display: grid;
-    // grid-template-columns: 40% auto;
+
     margin-top: 50px;
     margin-bottom: 30px;
-    // column-gap: 35px;
     width: 85%;
 
     position: relative;
     left: 50%;
     transform: translate(-50%);
+
+    @include breakpoint(md){
+        display: grid;
+        grid-template-columns: 40% auto;
+        column-gap: 35px;
+        margin-block: 30px;
+    }
 
     &__container{
         @include flexCenter(column, center, center);
