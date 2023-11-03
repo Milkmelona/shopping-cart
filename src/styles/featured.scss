@@ -3,12 +3,16 @@
 .feature {
     position: relative;
     overflow-x: hidden;
-    width:85%;
+    width:90%;
 
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translate(-50%);
+
+    @include breakpoint(sm, min){
+      width: 85%;
+  }
 
   &__title {
     margin-block: 1.3rem;
@@ -36,6 +40,10 @@
     width: 50%;
     margin-right: 30px;
     flex-shrink: 0;
+
+    @include breakpoint(sm, min) {
+      width: 33%;
+    }
 
     &:hover,
     &:focus {

@@ -7,15 +7,26 @@
 
     &__banner {
         @include flexCenter(column-reverse, center,center);
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
+
+        @include breakpoint(sm, min){
+            // margin-bottom: 0;
+        }
 
         &-description {
             text-align: center;
             padding: 20px;
+            font-size: 1.1rem;
+
+            @include breakpoint(sm, min){
+                font-size: 1.2rem;
+                width: 80%;
+            }
 
             &-title {
                 text-transform: uppercase;
                 letter-spacing: 2px;
+                font-size: 1.3em;
             }
 
 
@@ -36,9 +47,9 @@
         // grid-template-columns: auto 1fr;
         // width: 100%;
         
-        @include breakpoint(xxxl, min) {
-            width: 85%;
-        }
+        // @include breakpoint(xxxl, min) {
+        //     width: 85%;
+        // }
     }
     &__categories {
         grid-column: 1/2;
@@ -51,12 +62,34 @@
             }
     }
 
+    #product-sorter {
+        font-size: 1em;
+        padding: 8px;
+
+        @include breakpoint(sm, min) {
+            font-size: 1.1em;
+        }
+    }
+    
+    &__product-sorter {
+        margin-bottom: 10px;
+    }
+
     &__products {
-        display: grid;
-        grid-template-columns: 1fr ;
-        // column-gap: 10px;
+
+        // @include breakpoint(xs){
+            display: grid;
+            grid-template-columns: 1fr ;
+            width: 80%;
+        // }
         
         margin-inline: 20px;
+        @include breakpoint(sm, min){
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
 
             &-img-wrapper {
                 height: 300px;

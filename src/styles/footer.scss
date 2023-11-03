@@ -12,7 +12,7 @@
     background-size: cover;
     background-position: center;
     backdrop-filter: blur(35px);
-    padding: 20px 0;
+    padding-block: 30px;
 
         & h3 {
             font-size: 1.3rem;
@@ -72,8 +72,7 @@
             text-align: center;
             width: 100%;
             border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            padding-block: 15px;
+            padding-top: 25px;
 
             // @include breakpoint(sm, min){
             //     @include flexCenter(row, center, center);
@@ -83,6 +82,7 @@
                 list-style-type: none;
                 @include flexCenter(row, center, center);
                 padding: 0;
+                margin: 0;
 
                 @include breakpoint(sm, min){
                     gap: 10px;

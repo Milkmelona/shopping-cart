@@ -24,6 +24,11 @@
         @include breakpoint(sm, min){
             margin-inline: 20px;
         }
+
+        @include breakpoint(md, min){
+            @include flexCenter(row, flex-start, center);
+            gap: 18px;
+        }
     
     }
 
@@ -43,6 +48,10 @@
 
             @include breakpoint(sm, min){
                 text-align: center;
+            }
+
+            @include breakpoint(md, min){
+                // text-align: justify;
             }
         }
         &-wrapper {
