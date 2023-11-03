@@ -10,7 +10,7 @@
     left: 50%;
     transform: translate(-50%);
 
-    @include breakpoint(md){
+    @include breakpoint(sm, min){
         display: grid;
         grid-template-columns: 40% auto;
         column-gap: 35px;
@@ -41,7 +41,7 @@
         font-size: 1.4rem;
         margin-block: 1.1em;
 
-        @include breakpoint(md){
+        @include breakpoint(sm, min){
             font-size: 1.7rem;
             margin-block: 15px;
         }

@@ -12,7 +12,7 @@
         letter-spacing: 2px;
         font-size: 1.2rem;
 
-        @include breakpoint(md){
+        @include breakpoint(sm, min){
             font-size: 1.5rem;
         }
 
@@ -21,7 +21,7 @@
     &__container-main {
         @include flexCenter(column, center, center);
 
-        @include breakpoint(md){
+        @include breakpoint(sm, min){
             margin-inline: 20px;
         }
     
@@ -41,7 +41,7 @@
             font-size: 1.1rem;
             letter-spacing: 1.5px;
 
-            @include breakpoint(md){
+            @include breakpoint(sm, min){
                 text-align: center;
             }
         }

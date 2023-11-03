@@ -13,6 +13,7 @@ function Footer(){
                 <h3>Stay in the Sparkling Loop!</h3>
                 <div className="footer__emailForm-wrapper">
                 <p>Get 5% off on selected items by subscribing to our Newsletter</p>
+                <div className="footer__emailForm-input">
                 <input type="email" 
                 placeholder="Enter your email address"
                 id="email"
@@ -25,6 +26,7 @@ function Footer(){
                 color = {"#d69460"}
                 fontSize = {15}
                 />
+                </div>
                 </div>
             </div>
             <div className="footer__info">

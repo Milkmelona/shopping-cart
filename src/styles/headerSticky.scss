@@ -40,7 +40,7 @@
         @include flexCenter(row, center, center);
         gap: 3px;
 
-        @include breakpoint(md){
+        @include breakpoint(sm, min){
             gap: 5px;
         }
     }
@@ -51,7 +51,7 @@
         filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(96%) contrast(103%);
         cursor: pointer;
 
-        @include breakpoint(md){
+        @include breakpoint(sm, min){
             width: 1.7rem;
             height: 1.7rem;
         }
@@ -60,7 +60,7 @@
             width: 3rem;
             height: 3rem;
 
-            @include breakpoint(md){
+            @include breakpoint(sm, min){
                 width: 3.3rem;
                 height: 3.3rem;
             }
