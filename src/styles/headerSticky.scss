@@ -5,8 +5,12 @@
         position: sticky;
         top: 0;
         z-index: 100;
-        padding: 5px 8px;
+        padding: 20px 8px;
         background-color: #cb9d90;
+
+        @include breakpoint(sm, min){
+            padding-block: 20px;
+        }
 
     & span {
         font-size: 30px
@@ -26,12 +30,41 @@
         padding-bottom: 10px;
         padding-left: 0;
 
+        &.row {
+            @include flexCenter(row, center, center);
+            padding: 0;
+            position: static;
+            transform: translateX(0);
+            gap: 10px;
+
+            @include breakpoint(md, min){
+                gap: 15px;
+            }
+    
+            @include breakpoint(lg, min){
+                gap: 20px;
+            }
+        }
+
         & li {
             padding-block: 20px;
             padding-left: 12px;
             margin-inline: 14px;
             border-bottom: 1px solid black;
             width: 90%;
+
+            @include breakpoint(sm, min){
+                border: none;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                width: auto;
+                font-size: 1.3rem;
+            }
+
+            @include breakpoint(md, min){
+                font-size: 1.5rem;
+            }
         }
 
     }
@@ -41,19 +74,32 @@
         gap: 3px;
 
         @include breakpoint(sm, min){
-            gap: 5px;
+            gap: 2px;
         }
     }
 
     &__icon {
-        width: 1.4rem;
-        height: 1.4rem;
+        // width: 1.4rem;
+        // height: 1.4rem;
         filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(96%) contrast(103%);
         cursor: pointer;
 
-        @include breakpoint(sm, min){
-            width: 1.7rem;
-            height: 1.7rem;
+        width: 1.7rem;
+        height: 1.7rem;
+
+            @include breakpoint(sm, min){
+                width: 1.9rem;
+                height: 1.9rem;
+            }
+
+            @include breakpoint(lg, min){
+                padding-block: 0;
+                padding-inline: 3px;
+            }
+    
+
+        &.hidden {
+            display: none;
         }
 
         &.logo {

@@ -3,10 +3,12 @@ import { useState } from "react";
 import "../styles/header.scss"
 import HeaderIcon from "./HeaderButtons";
 import NavBar from "./Navigation";
+import { useMediaQuery } from 'react-responsive';
 
 function Header(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
+    const isMedScrn = useMediaQuery({ query: '(min-width: 900px)' })
         
     function handleDropDown(){
         setIsMenuVisible(!isMenuVisible);
@@ -22,7 +24,30 @@ return (
             btnClass={"header__icon logo"}
         />
         </div>
-        <h1>Methuselah</h1>
+        <h1 className={`header__title ${isMedScrn? 'medScr' : ''}`}>Methuselah</h1>
+        {isMedScrn ? <div className="header__list flex">
+            <HeaderIcon
+            src={"../src/assets/search.svg"} 
+            alt={"search"} 
+            btnClass={"header__icon search"}
+            />
+            <HeaderIcon
+            src={"../src/assets/account.svg"} 
+            alt={"account"} 
+            btnClass={"header__icon account"}
+            />
+            <HeaderIcon
+            src={"../src/assets/heart.svg"} 
+            alt={"wishlist"} 
+            btnClass={"header__icon heart"}
+            />
+            <HeaderIcon
+            src={"../src/assets/cart.svg"} 
+            alt={"cart"} 
+            btnClass={"header__icon cart"}
+            />
+        </div>
+        : 
         <div className="header__menu-wrapper">
         <HeaderIcon
             src={"../src/assets/menu.svg"}
@@ -52,7 +77,8 @@ return (
             btnClass={"header__icon cart"}
             />
         </div>}
-        </div>
+        </div> 
+        }
         </div>
         <div className="header__bottom">
        <NavBar/>

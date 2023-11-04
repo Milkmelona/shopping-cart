@@ -1,11 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import HeaderIcon from "./HeaderButtons";
+import { useMediaQuery } from "react-responsive";
 import "../styles/headerSticky.scss"
 
 function HeaderSticky(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
+    const isSmScrn = useMediaQuery({ query: '(min-width: 600px)' })
 
     function handleDropDrown(){
         setIsMenuVisible(!isMenuVisible);
@@ -69,25 +71,37 @@ function HeaderSticky(){
             btnClass={"headerSticky__icon cart"}
             />
      </div>
-     <div className="headerSticky__logo">
+     {isSmScrn ? <ul className="headerSticky__list row">
+                <li>Shop</li>
+                <li>Collection</li>
+                <li>About Us</li>
+                <li>FAQs</li>
+            </ul> : <div className="headerSticky__logo">
         <HeaderIcon
             src={"../src/assets/methuselah-logo.svg"}
             alt={"methuselah logo"}
             btnClass={"headerSticky__icon logo"}
         />
-    </div>
+        </div>}
      <div className="headerSticky__icons right">
             <HeaderIcon
             src={"../src/assets/search.svg"} 
             alt={"search"} 
             btnClass={"headerSticky__icon search"}
             />
-            <HeaderIcon
+        {isSmScrn ? <HeaderIcon
+            src={"../src/assets/methuselah-logo.svg"}
+            alt={"methuselah logo"}
+            btnClass={"headerSticky__icon logo"}
+        /> 
+            :
+            <HeaderIcon 
             src={"../src/assets/menu.svg"}
             alt={"menu"}
-            btnClass={"headerSticky__icon menu"}
+            btnClass={`headerSticky__icon menu ${isSmScrn ? 'hidden': ""}`}
             onClick={handleDropDrown}
             />
+            }
      </div>
      {isMenuVisible && <ul className="headerSticky__list">
                 <li>Shop</li>

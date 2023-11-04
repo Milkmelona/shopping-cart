@@ -2,8 +2,8 @@ import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
 import img1 from "../assets/Unsplash Images/featured-collection-img-1.jpg"
 import img1Comp from "../assets/Compressed Unsplash Images/featured-collection-img-1-min.jpg"
-import img2 from  "../assets/Unsplash Images/featured-collection-img-2.jpg"
-import img2Comp from  "../assets/Compressed Unsplash Images/featured-collection-img-2-min.jpg"
+import img2 from  "../assets/Unsplash Images/featured-collection-img-2.png"
+import img2Comp from  "../assets/Compressed Unsplash Images/featured-collection-img-2-min.png"
 import Button from "./Buttons";
 
 import Imgwrapper from "./Imagewrapper";
@@ -13,6 +13,13 @@ function FeaturedCollection(){
 
     return(
         <section className="fc">
+            <div className="fc__container">
+              <div className="fc__text-wrapper">
+              <h4 className="fc__title">Gaia</h4>
+              <p className="fc__desc2">Crafted from ethically sourced gemstones and sustainable materials,
+                 this collection embodies the harmony between art and the environment, allowing you to wear the elegance of nature with every piece.
+                 </p>
+              </div>
               <Imgwrapper className="fc__img-wrapper">
               <ProgressiveImage
                 src={img1}
@@ -30,13 +37,9 @@ function FeaturedCollection(){
                     )}
               </ProgressiveImage>
               </Imgwrapper>
+            </div>
         <div className="fc__container">
-              <div className="fc__text-wrapper">
-              <h4 className="fc__title">Gaia</h4>
-              <p className="fc__desc2">Crafted from ethically sourced gemstones and sustainable materials,
-                 this collection embodies the harmony between art and the environment, allowing you to wear the elegance of nature with every piece.</p>
-              </div>
-              {/* <Imgwrapper className="fc__img-wrapper">
+              <Imgwrapper className="fc__img-wrapper">
               <ProgressiveImage
                 src={img2}
                 placeholder={img2Comp}
@@ -52,7 +55,7 @@ function FeaturedCollection(){
                         />
                     )}
               </ProgressiveImage>
-              </Imgwrapper> */}
+              </Imgwrapper>
               <Button
               text = {"Show Collection"}
               color = {"#a1b4bf"}

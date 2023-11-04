@@ -36,8 +36,8 @@ function App() {
       <HeaderSticky/>
       ) : (
       <Header/>)}
-      {/* <Homepage/> */}
-      <Shop/>
+      <Homepage/>
+      {/* <Shop/> */}
       <Footer/>
     </>
   )
