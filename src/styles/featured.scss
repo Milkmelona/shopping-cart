@@ -14,11 +14,19 @@
       width: 85%;
   }
 
+  @include breakpoint(xlg, min){
+    width: 80%;
+  }
+
   &__title {
     margin-block: 1.3rem;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+
+    @include breakpoint(lg, min){
+      font-size: 1.3rem;
+    }
   }
 
   &__products {
@@ -43,6 +51,10 @@
 
     @include breakpoint(sm, min) {
       width: 33%;
+    }
+
+    @include breakpoint(xlg, min) {
+      width: 30%;
     }
 
     &:hover,
@@ -86,6 +98,15 @@
       text-align: center;
       letter-spacing: 1px;
       word-break: break-all;
+
+      @include breakpoint(md, min){
+        font-size: 1.2rem;
+      }
+    }
+    &__price {
+      @include breakpoint(md, min){
+        font-size: 1.2rem;
+      }
     }
 
   }
@@ -94,7 +115,7 @@
     &-viewport {
         position: relative;
         width: 100%;
-        overflow: hidden;
+        // overflow: hidden;
       
     }
 

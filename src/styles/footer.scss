@@ -67,6 +67,11 @@
         @include breakpoint(sm, min){
             padding-block: 40px;
         }
+
+        @include breakpoint(md, min){
+            @include flexCenter(row, center, center);
+        }
+
         
         &-left {
             text-align: center;
@@ -74,10 +79,10 @@
             border-top: 1px solid black;
             padding-top: 25px;
 
-            // @include breakpoint(sm, min){
-            //     @include flexCenter(row, center, center);
-            //     border: none;
-            // }
+            @include breakpoint(md, min){
+                border-top: none;
+                padding-top: 0;
+            }
             & ul {
                 list-style-type: none;
                 @include flexCenter(row, center, center);
@@ -87,6 +92,11 @@
                 @include breakpoint(sm, min){
                     gap: 10px;
                 }
+
+                @include breakpoint(md, min){
+                    gap: 10px;
+                    @include flexCenter(column, center, flex-start);
+                }
             }
         }
         &-right {
@@ -95,9 +105,9 @@
             gap: 15px;
             margin-bottom: 40px;
 
-            // @include breakpoint(sm, min){
-            //     margin-bottom: 0;
-            // }
+            @include breakpoint(md, min){
+                border-left: 1px solid black;
+            }
 
             &img {
                 width: 50px;

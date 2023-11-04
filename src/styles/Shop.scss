@@ -7,10 +7,11 @@
 
     &__banner {
         @include flexCenter(column-reverse, center,center);
-        // margin-bottom: 40px;
 
-        @include breakpoint(sm, min){
-            // margin-bottom: 0;
+
+        @include breakpoint(lg, min){
+            @include flexCenter(row, center, center);
+            margin-bottom: 40px;
         }
 
         &-description {
@@ -69,6 +70,11 @@
         @include breakpoint(sm, min) {
             font-size: 1.1em;
         }
+
+        @include breakpoint(lg, min){
+            font-size: 1.2em;
+        }
+
     }
     
     &__product-sorter {
@@ -88,6 +94,13 @@
             width: 85%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+
+        @include breakpoint(lg, min){
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             column-gap: 20px;
         }
 

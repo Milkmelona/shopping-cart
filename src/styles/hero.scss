@@ -29,6 +29,14 @@
     filter: brightness(80%) grayscale(30%);
     transition: opacity 500ms ease-out;
 
+    @include breakpoint(xlg, min) {
+      height: 500px
+    }
+
+    @include breakpoint(xxlg, min) {
+      height: 650px
+    }
+
     &.img--loading {
       @extend %image-loading
     }
@@ -42,6 +50,9 @@
     transform: translate(-50%);
     margin-bottom: 20px;
 
+    @include breakpoint(lg, min){
+      margin-bottom: 40px;
+    }
       &-text {
         font-size: 1.2rem;
         color: white;

@@ -4,8 +4,14 @@
     @include flexCenter(column, flex-start, center);
     padding-inline: 20px;
     margin-block: 30px;
+    
 
-
+    @include breakpoint(sm, min){
+        width: 90%;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%);
+    }
 
     &__title {
         text-transform: uppercase;
@@ -15,6 +21,11 @@
         @include breakpoint(sm, min){
             font-size: 1.5rem;
         }
+
+        @include breakpoint(xlg, min){
+            font-size: 1.7rem;
+        }
+  
 
     }
 
@@ -40,6 +51,10 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 1.2rem;
+
+            @include breakpoint(xlg, min){
+                font-size: 1.4rem;
+            }
         }
 
         p {
@@ -50,8 +65,9 @@
                 text-align: center;
             }
 
-            @include breakpoint(md, min){
-                // text-align: justify;
+            @include breakpoint(lg, min){
+                // text-align: left;
+                line-height: 1.5;
             }
         }
         &-wrapper {
@@ -60,6 +76,11 @@
                 width: 3rem;
                 height: 3rem;
                 filter: invert(81%) sepia(17%) saturate(1057%) hue-rotate(326deg) brightness(93%) contrast(90%);
+
+                @include breakpoint(xlg, min){
+                    width: 5rem;
+                    height: 5rem;
+                }
                 
             }
             & h3 {
