@@ -1,0 +1,16 @@
+@import './utils';
+
+.about {
+    @include flexCenter(column, center, center);
+
+    &__intro {
+        @include flexCenter(column, center, center);
+    }
+    &__locations {
+        @include flexCenter(column, center, center);
+
+        &-main {
+            @include flexCenter(row, center, center);
+        }
+    }
+}
