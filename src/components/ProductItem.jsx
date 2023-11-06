@@ -1,11 +1,10 @@
 import React from "react";
-import  productInfo  from "../data/prodImages";
 import ProgressiveImage from "react-progressive-graceful-image";
 
-function ProductItem(){
+function ProductItem({productItems}){
     return (
         <>
-        {productInfo.map((product) => (
+        {productItems.map((product) => (
                     <div className="shop__products-item"  key={product.name}>
                         <div className="shop__products-img-wrapper">
                         <ProgressiveImage 

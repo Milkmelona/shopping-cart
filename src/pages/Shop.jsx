@@ -1,4 +1,3 @@
-import React from "react";
 import products from "../data/products";
 import bannerImg from "../assets/Products/products-banner-img.jpg"
 import bannerImgComp from "../assets/Compressed-Unsplash-Images/products-banner-img-min.jpg"
@@ -6,8 +5,26 @@ import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Shop.scss"
 import ReactPaginate from "react-paginate";
 import ProductItem from "../components/ProductItem";
+import  productInfo  from "../data/prodImages";
+import { useState, useEffect } from "react";
 
 function Shop(){
+    const[currentPage, setCurrentPage] = useState(1);
+    const ITEMS_PER_PAGE = 12;
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    const shownProds = productInfo.slice(start, end)
+    const pageCount = Math.ceil(productInfo.length/ITEMS_PER_PAGE)
+    
+
+    // function handlePageChange(selectedPage){
+    //     setCurrentPage(selectedPage + 1)
+    // }
+
+    function handlePageChange(){
+        setCurrentPage(currentPage+1)
+    }
+
     return(
         <div className="shop">
             <section className="shop__banner">
@@ -34,7 +51,7 @@ function Shop(){
             </section>
             <section className="shop__main">
                 <div className="shop__product-sorter">
-                    <label for="product-sorter">
+                    <label htmlFor="product-sorter">
                     <select name="product-sorter" id="product-sorter">
                         <option value="sale">Sale</option>
                         <option value="recommended">Recommended</option>
@@ -54,8 +71,20 @@ function Shop(){
                 <li className="shop__categories-selection">Ring</li> 
             </ul>*/}
             <div className="shop__products">
-                <ProductItem/>
+                <ProductItem productItems={shownProds}/>
             </div>
+            <ReactPaginate
+                onPageChange={handlePageChange}
+                previousLabel={'previous'}
+                nextLabel={'next'}
+                breakLabel={'...'}
+                pageCount={pageCount}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={5}
+                containerClassName={'pagination'}
+                subContainerClassName={'pages pagination'}
+                activeClassName={'active'}
+            />
             </section>
         </div>
     )

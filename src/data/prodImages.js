@@ -23,7 +23,7 @@ function handleImgUrl(number, isCompressed) {
   
     // Construct the complete image URL
     const imgUrl = new URL(`../assets/${baseDirectory}/${fileName}.jpg`, import.meta.url).href;
-    console.log(imgUrl)
+    
     return imgUrl;
   }
 
