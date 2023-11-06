@@ -1,9 +1,11 @@
 import React from "react";
 import products from "../data/products";
 import bannerImg from "../assets/Products/products-banner-img.jpg"
-import bannerImgComp from "../assets/Compressed Unsplash Images/products-banner-img-min.jpg"
+import bannerImgComp from "../assets/Compressed-Unsplash-Images/products-banner-img-min.jpg"
 import ProgressiveImage from "react-progressive-graceful-image";
 import "../styles/Shop.scss"
+import ReactPaginate from "react-paginate";
+import ProductItem from "../components/ProductItem";
 
 function Shop(){
     return(
@@ -52,31 +54,7 @@ function Shop(){
                 <li className="shop__categories-selection">Ring</li> 
             </ul>*/}
             <div className="shop__products">
-                {products.map((product) => (
-                    <div className="shop__products-item"  key={product.id}>
-                        <div className="shop__products-img-wrapper">
-                        <ProgressiveImage 
-                            src={product.src}
-                            placeholder={product.compSrc}
-                            >
-                            {(src, loading) => (
-                                <img
-                                src = {src}
-                                alt = {product.alt}
-                                className = {`shop__products-item-img ${
-                                    loading && 'img--loading'}`
-                                }
-                                loading = "lazy"
-                                />
-                            )}
-                        </ProgressiveImage>
-                        </div>
-                        <div className="shop__products-item-desc">
-                        <h3 className="shop__products-item-title">{product.name}</h3>
-                        <div className="shop__products-item-price">{product.price}</div>
-                        </div>
-                    </div>
-                )) }
+                <ProductItem/>
             </div>
             </section>
         </div>

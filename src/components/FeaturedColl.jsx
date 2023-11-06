@@ -1,9 +1,9 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
 import img1 from "../assets/Unsplash Images/featured-collection-img-1.jpg"
-import img1Comp from "../assets/Compressed Unsplash Images/featured-collection-img-1-min.jpg"
+import img1Comp from "../assets/Compressed-Unsplash-Images/featured-collection-img-1-min.jpg"
 import img2 from  "../assets/Unsplash Images/featured-collection-img-2.png"
-import img2Comp from  "../assets/Compressed Unsplash Images/featured-collection-img-2-min.png"
+import img2Comp from  "../assets/Compressed-Unsplash-Images/featured-collection-img-2-min.png"
 import Button from "./Buttons";
 
 import Imgwrapper from "./Imagewrapper";

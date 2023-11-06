@@ -1,7 +1,7 @@
 import products from "./products";
 
-const productImgs = products.map((item) => 
-  Object.freeze(getImg(item))
+const productInfo = products.map((item) => 
+    Object.freeze(getImg(item))
 );
 
 function getImg(item) {
@@ -13,18 +13,18 @@ function getImg(item) {
 }
 
 function handleImgUrl(number, isCompressed) {
-  // Define the base URL for your images
-  const baseUrl = isCompressed
-    ? "/Compressed Unsplash Images"
-    : "/Products";
+    // Define the base directory
+    const baseDirectory = isCompressed
+      ? 'Compressed-Unsplash-Images'
+      : 'Products';
+  
+    // Define the image file name
+    const fileName = isCompressed ? `product-img-${number}-min` : `product-img-${number}`;
+  
+    // Construct the complete image URL
+    const imgUrl = new URL(`../assets/${baseDirectory}/${fileName}.jpg`, import.meta.url).href;
+    console.log(imgUrl)
+    return imgUrl;
+  }
 
-  // Define the image file name
-  const fileName = isCompressed ? `product-img-min-${number}` : `product-img-${number}`;
-
-  // Construct the complete image URL
-  const imgUrl = new URL(`../assets${baseUrl}/${fileName}.jpg`, import.meta.url).href;
-
-  return imgUrl;
-}
-
-export {productImgs}
+export default productInfo;

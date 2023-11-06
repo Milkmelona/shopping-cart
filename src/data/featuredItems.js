@@ -6,12 +6,12 @@ import featured5 from "../assets/Unsplash Images/featured-img-5.jpg"
 import featured6 from "../assets/Unsplash Images/featured-img-6.jpg"
 
 
-import compFeatured1 from "../assets/Compressed Unsplash Images/featured-img-1-min.jpg"
-import compFeatured2 from "../assets/Compressed Unsplash Images/featured-img-2-min.jpg"
-import compFeatured3 from "../assets/Compressed Unsplash Images/featured-img-3-min.jpg"
-import compFeatured4 from "../assets/Compressed Unsplash Images/featured-img-4-min.jpg"
-import compFeatured5 from "../assets/Compressed Unsplash Images/featured-img-5-min.jpg"
-import compFeatured6 from "../assets/Compressed Unsplash Images/featured-img-6-min.jpg"
+import compFeatured1 from "../assets/Compressed-Unsplash-Images/featured-img-1-min.jpg"
+import compFeatured2 from "../assets/Compressed-Unsplash-Images/featured-img-2-min.jpg"
+import compFeatured3 from "../assets/Compressed-Unsplash-Images/featured-img-3-min.jpg"
+import compFeatured4 from "../assets/Compressed-Unsplash-Images/featured-img-4-min.jpg"
+import compFeatured5 from "../assets/Compressed-Unsplash-Images/featured-img-5-min.jpg"
+import compFeatured6 from "../assets/Compressed-Unsplash-Images/featured-img-6-min.jpg"
 
 const featuredImgs = [
     {

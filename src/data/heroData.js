@@ -6,12 +6,12 @@ import hero5 from "../assets/Unsplash Images/hero-img-5.jpg"
 import hero6 from "../assets/Unsplash Images/hero-img-6.jpg"
 
 
-import compressedHero1 from "../assets/Compressed Unsplash Images/hero-img-1-min.jpg"
-import compressedHero2 from "../assets/Compressed Unsplash Images/hero-img-2-min.jpg"
-import compressedHero3 from "../assets/Compressed Unsplash Images/hero-img-3-min.jpg"
-import compressedHero4 from "../assets/Compressed Unsplash Images/hero-img-4-min.jpg"
-import compressedHero5 from "../assets/Compressed Unsplash Images/hero-img-5-min.jpg"
-import compressedHero6 from "../assets/Compressed Unsplash Images/hero-img-6-min.jpg"
+import compressedHero1 from "../assets/Compressed-Unsplash-Images/hero-img-1-min.jpg"
+import compressedHero2 from "../assets/Compressed-Unsplash-Images/hero-img-2-min.jpg"
+import compressedHero3 from "../assets/Compressed-Unsplash-Images/hero-img-3-min.jpg"
+import compressedHero4 from "../assets/Compressed-Unsplash-Images/hero-img-4-min.jpg"
+import compressedHero5 from "../assets/Compressed-Unsplash-Images/hero-img-5-min.jpg"
+import compressedHero6 from "../assets/Compressed-Unsplash-Images/hero-img-6-min.jpg"
 
 
 const heroImages = [

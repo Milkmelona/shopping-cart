@@ -1,35 +1,3 @@
-// import img1 from "../assets/Products/product-img-1.jpg"
-// import img2 from "../assets/Products/product-img-2.jpg"
-// import img3 from "../assets/Products/product-img-3.jpg"
-// import img4 from "../assets/Products/product-img-4.jpg"
-// import img5 from "../assets/Products/product-img-5.jpg"
-// import img6 from "../assets/Products/product-img-6.jpg"
-// import img7 from "../assets/Products/product-img-7.jpg"
-// import img8 from "../assets/Products/product-img-8.jpg"
-// import img9 from "../assets/Products/product-img-9.jpg"
-// import img10 from "../assets/Products/product-img-10.jpg"
-// import img11 from "../assets/Products/product-img-11.jpg"
-// import img12 from "../assets/Products/product-img-12.jpg"
-// import img13 from "../assets/Products/product-img-13.jpg"
-// import img14 from "../assets/Products/product-img-14.jpg"
-// import img15 from "../assets/Products/product-img-15.jpg"
-
-// import img1Comp from "../assets/Compressed Unsplash Images/product-img-1-min.jpg"
-// import img2Comp from "../assets/Compressed Unsplash Images/product-img-2-min.jpg"
-// import img3Comp from "../assets/Compressed Unsplash Images/product-img-3-min.jpg"
-// import img4Comp from "../assets/Compressed Unsplash Images/product-img-4-min.jpg"
-// import img5Comp from "../assets/Compressed Unsplash Images/product-img-5-min.jpg"
-// import img6Comp from "../assets/Compressed Unsplash Images/product-img-6-min.jpg"
-// import img7Comp from "../assets/Compressed Unsplash Images/product-img-7-min.jpg"
-// import img8Comp from "../assets/Compressed Unsplash Images/product-img-8-min.jpg"
-// import img9Comp from "../assets/Compressed Unsplash Images/product-img-9-min.jpg"
-// import img10Comp from "../assets/Compressed Unsplash Images/product-img-10-min.jpg"
-// import img11Comp from "../assets/Compressed Unsplash Images/product-img-11-min.jpg"
-// import img12Comp from "../assets/Compressed Unsplash Images/product-img-12-min.jpg"
-// import img13Comp from "../assets/Compressed Unsplash Images/product-img-13-min.jpg"
-// import img14Comp from "../assets/Compressed Unsplash Images/product-img-14-min.jpg"
-// import img15Comp from "../assets/Compressed Unsplash Images/product-img-15-min.jpg"
-
 const products = [
     {
         name: "Vega",
@@ -53,7 +21,7 @@ const products = [
         name: "Orion",
         price: "₱19500",
         alt: "Emerald and gold bracelet",
-        id: "90AbCdEfGhIjK",
+        id: "90AbCdEfGhIjL",
         quantity: 15,
         number: 3
     },
@@ -158,7 +126,7 @@ const products = [
     },
     
     {
-        name: "Orion",
+        name: "Zeles",
         price: "₱14500",
         alt: "Aquamarine and gold pendant",
         id: "RstUVwXyZaBc",
