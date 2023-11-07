@@ -2,15 +2,122 @@
 
 .about {
     @include flexCenter(column, center, center);
-
+    line-height: 1.5;
     &__intro {
         @include flexCenter(column, center, center);
+        @include breakpoint(sm, min){
+                padding-inline: 1.5em;
+        }
+
+         h3{
+            font-size: 1.3rem;
+            padding-inline: 12px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0;
+         }
+
+         p {
+            font-size: 1.1rem;
+            text-align: justify;
+            padding-inline: 15px;
+
+            @include breakpoint(sm, min){
+                text-align: center;
+                font-size: 1.25rem;
+            }
+         }
+
+    }
+
+    &__info-container{
+        @include flexCenter(column, center, center);
+        // width: 65%
+    }
+    &__text-wrapper {
+        @extend .about__intro;
+        margin-block-end: 25px;
+
+        &.loc {
+            margin-block-end: 0;
+            
+        }
+    }
+
+    &__img-wrapper {
+        @include flexCenter(row, center, center);
+        border: 7px solid var(--color-grey-light-2);
+        width: 85%;
+        overflow: hidden;
+        
+
+        & img {
+        
+        transition: 300ms linear;  
+        
+        &:hover {
+        transform: scale(1.025);
+        }}
+        
+    
+        &:hover,
+        &:focus {
+          border-color: var(--color-primary);
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+
+        @include breakpoint(sm, min){
+            width: 100%;
+        }
+
+        &.img--loading {
+            @extend %image-loading
+            }
+    }
+
+    &__history, &__advocacy {
+        @include flexCenter(column, center, center);
+    }
+    &__values {
+       padding-inline: 15px;  
+
+       &-container {
+         p {
+            font-size: 1.1rem;
+            text-align: justify;
+         }
+
+         h3 {
+            letter-spacing: 2px;
+            text-align: center;
+         }
+       }
     }
     &__locations {
-        @include flexCenter(column, center, center);
+        @include flexCenter(column, flex-start, center);
+        padding-inline: 15px;
+        margin-block-end: 30px;
 
         &-main {
-            @include flexCenter(row, center, center);
+            @include flexCenter(column, flex-start, center);
+
+            ul {
+                padding-inline-start: 30px;
+                margin-top: 0;
+
+                h3 {
+                    font-size: 1.3em;
+                }
+
+                li {
+                    font-size: 1.2em;
+                }
+            }
         }
     }
 }

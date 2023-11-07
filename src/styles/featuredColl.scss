@@ -39,10 +39,6 @@
             width: 100%;
         }
 
-        // &.img1 {
-        //     height: 450px;
-        // }
-
         &.img--loading {
             @extend %image-loading
             }
