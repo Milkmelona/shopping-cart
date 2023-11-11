@@ -32,18 +32,6 @@
         // position: absolute;
     }
 
-    &__img {
-        width: 100%;
-
-        @include breakpoint(sm, min){
-            width: 100%;
-        }
-
-        &.img--loading {
-            @extend %image-loading
-            }
-    }
-
     &__title {
         letter-spacing: 4px;
         text-transform: uppercase;
@@ -74,8 +62,16 @@
         
 
         & img {
-        
+        width: 100%;
         transition: 300ms linear;  
+
+        @include breakpoint(sm, min){
+            width: 100%;
+        }
+
+        &.img--loading {
+            @extend %image-loading
+            }
         
         &:hover {
         transform: scale(1.025);

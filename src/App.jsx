@@ -7,6 +7,7 @@ import Footer from "../src/components/Footer"
 import HeaderSticky from './components/Header-sticky'
 import Collection from './pages/Collectionpage'
 import Shop from './pages/Shop'
+import Faqs from './pages/faqs'
 import About from './pages/About'
 
 function App() {
@@ -38,8 +39,9 @@ function App() {
       ) : (
       <Header/>)}
       {/* <Homepage/> */}
-      <About/>
+      {/* <About/> */}
       {/* <Shop/> */}
+      <Faqs/>
       <Footer/>
     </>
   )

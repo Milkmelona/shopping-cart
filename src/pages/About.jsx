@@ -18,8 +18,7 @@ function About(){
                 and our mission is to adorn her with celestial treasures that capture the essence of the cosmos.</p>
         </section>
         <section className="about__info-container">
-        <div className="about__history">
-            <Imgwrapper className="about__img-wrapper">
+            <Imgwrapper className="about__img-wrapper panel1">
             <ProgressiveImage
                 src={img1}
                 placeholder={img1Comp}
@@ -36,7 +35,7 @@ function About(){
                     )}
             </ProgressiveImage>
             </Imgwrapper>
-            <div className="about__text-wrapper">
+            <div className="about__text-wrapper panel2">
             <h3>The Birth of Cosmic Charms</h3>
             <p>Our story began with a small group of artisans who shared a common love for celestial wonders. This vision led to the birth of Cosmic Charms, 
             a jewelry store unlike any other, where we aimed to capture the essence of the universe in every piece.</p>
@@ -48,9 +47,19 @@ function About(){
                     className = {"hero-item__wrapper-btn"}
                     />
             </div>
-        </div>
-        <div className="about__advocacy">
-            <Imgwrapper className="about__img-wrapper">
+            <div className="about__text-wrapper panel4">
+            <h3>Empowering Women Through Time</h3>
+            <p>Empowering women to embrace their own inner light, strength, and individuality. 
+            We believe that our jewelry serves as a bridge between the ancient wisdom of the stars and the modern woman's journey.</p>
+            <Button
+                    text = {"Shop Now"}
+                    color = {"#c4aeac"}
+                    fontSize ={21}
+                    type = {"button"}
+                    className = {"hero-item__wrapper-btn"}
+                    />
+            </div>
+            <Imgwrapper className="about__img-wrapper panel3">
             <ProgressiveImage
                 src={img2}
                 placeholder={img2Comp}
@@ -67,21 +76,8 @@ function About(){
                     )}
             </ProgressiveImage>
             </Imgwrapper>
-            <div className="about__text-wrapper">
-            <h3>Empowering Women Through Time</h3>
-            <p>Empowering women to embrace their own inner light, strength, and individuality. 
-            We believe that our jewelry serves as a bridge between the ancient wisdom of the stars and the modern woman's journey.</p>
-            <Button
-                    text = {"Shop Now"}
-                    color = {"#c4aeac"}
-                    fontSize ={21}
-                    type = {"button"}
-                    className = {"hero-item__wrapper-btn"}
-                    />
-            </div>
-        </div>
         </section>
-        <section className="about__values">
+        {/* <section className="about__values">
             <div className="about__values-container">
                 <h3>Personalized Assistance</h3>
                 <p>When you visit our showrooms, you will have the opportunity to touch and try on our exquisite pieces, guided by our knowledgeable and friendly staff.
@@ -97,7 +93,7 @@ function About(){
                 <p>Whether you're a seasoned astronomer, a budding stargazer, or simply someone who appreciates the beauty of the cosmos, we invite you to join our celestial community. 
                    Connect with us, engage in the wonders of the universe, and become a part of our mission to empower and inspire.</p>
             </div>
-        </section>
+        </section> */}
         <section className="about__locations">
             <div className="about__text-wrapper loc">
             <h3>Discover Our Showroom Locations</h3>
