@@ -25,7 +25,7 @@ function Faqs(){
             )}
         </ProgressiveImage>
         </Imgwrapper>
-        <h2>Frequently Asked Questions</h2>
+        <h2 className="faqs__title">Frequently Asked Questions</h2>
         </section>
         <section className="faqs__info-main">
             <div className="faqs__info-container">

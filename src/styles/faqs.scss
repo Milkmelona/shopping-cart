@@ -5,20 +5,70 @@
         position: relative;
     }
 
-    h2 {
+    &__info-main {
+        width: 90%;
+        margin: 0 auto;
+    }
+    &__title {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        text-transform: uppercase;
-        text-align: center;
         color: white;
+        text-align: center;
+        text-transform: uppercase;
         letter-spacing: 1.5px;
 
         @include breakpoint(sm){
             font-size: 1.7rem;
-        }
     }
+    }
+    &__button {
+        width: 20px;
+        height: 20px;
+    }
+    button {
+        @include flexCenter(row, center, space-between);
+
+        &:hover,
+        &:active {
+        scale: 1;
+    }
+    }
+    &__info-container {
+
+         h2 {
+            text-align: left;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+
+            @include breakpoint(sm){
+                font-size: 1.5rem;
+        }
+         }
+    }
+
+    &__accordion {
+        background: transparent;
+        cursor: pointer;
+        padding: 18px 0;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        color: #cf9379;
+        border-bottom: 1px solid #d5bfaf;
+        font-size: 1.1em;
+    }
+
     &__img-wrapper {
         @include flexCenter(row, center, center);
         border: 7px solid var(--color-grey-light-2);
