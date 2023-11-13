@@ -8,6 +8,7 @@
     &__info-main {
         width: 90%;
         margin: 0 auto;
+        padding-block: 50px;
     }
     &__title {
         position: absolute;
@@ -18,10 +19,24 @@
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 1.5px;
+        font-size: 1.7rem;
+        margin: 0;
 
-        @include breakpoint(sm){
-            font-size: 1.7rem;
-    }
+
+        @include breakpoint(sm, min){
+            font-size: 1.95rem;
+        }
+
+        @include breakpoint(md, min){
+            font-size: 2rem;
+        }
+
+        @include breakpoint(lg, min){
+            font-size: 2.3rem;
+        }
+        @include breakpoint(xlg, min){
+            font-size: 2.5rem;
+        }
     }
     &__button {
         width: 20px;
@@ -37,17 +52,39 @@
     }
     &__info-container {
 
+        padding-block-end: 30px;
+
          h2 {
             text-align: left;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-
-            @include breakpoint(sm){
-                font-size: 1.5rem;
-        }
+            margin: 0;
+            font-size: 1.6rem;
          }
-    }
+        
+        @include breakpoint(sm, min){
+            font-size: 1.8rem;
+        }
 
+        @include breakpoint(md, min){
+            font-size: 1.9rem;
+        }
+
+        @include breakpoint(lg, min){
+            font-size: 2.2rem;
+        }
+
+        @include breakpoint(xlg, min){
+            font-size: 2.3rem;
+        }
+
+    }
+    &__panel {
+        font-size: 1.05rem;
+        line-height: 1.5;
+        letter-spacing: 1.3px;
+
+    }
     &__accordion {
         background: transparent;
         cursor: pointer;
@@ -55,18 +92,14 @@
         width: 100%;
         border: none;
         text-align: left;
-        outline: none;
-        -webkit-transition: 0.4s;
         transition: 0.4s;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
         color: #cf9379;
         border-bottom: 1px solid #d5bfaf;
-        font-size: 1.1em;
+        font-size: 1.05rem;
+
+        p {
+            margin: 0;
+        }
     }
 
     &__img-wrapper {
