@@ -13,7 +13,7 @@ function About(){
     <main className="about">
         <section className="about__intro">
             <h3>Our Celestial Journey Through Time</h3>
-            <p> Welcome to Cosmic Charms, where the beauty of the universe meets the elegance of jewelry.
+            <p> Welcome to Methuselah, where the beauty of the universe meets the elegance of jewelry.
                 We believe that every woman is a shining star in her own right, 
                 and our mission is to adorn her with celestial treasures that capture the essence of the cosmos.</p>
         </section>
@@ -36,8 +36,8 @@ function About(){
             </ProgressiveImage>
             </Imgwrapper>
             <div className="about__text-wrapper panel2">
-            <h3>The Birth of Cosmic Charms</h3>
-            <p>Our story began with a small group of artisans who shared a common love for celestial wonders. This vision led to the birth of Cosmic Charms, 
+            <h3>The Birth of Methuselah</h3>
+            <p>Our story began with a small group of artisans who shared a common love for celestial wonders. This vision led to the birth of Methuselah, 
             a jewelry store unlike any other, where we aimed to capture the essence of the universe in every piece.</p>
             <Button
                     text = {"Shop Now"}
@@ -47,7 +47,7 @@ function About(){
                     className = {"hero-item__wrapper-btn"}
                     />
             </div>
-            <div className="about__text-wrapper panel4">
+            <div className="about__text-wrapper panel3">
             <h3>Empowering Women Through Time</h3>
             <p>Empowering women to embrace their own inner light, strength, and individuality. 
             We believe that our jewelry serves as a bridge between the ancient wisdom of the stars and the modern woman's journey.</p>
@@ -59,7 +59,7 @@ function About(){
                     className = {"hero-item__wrapper-btn"}
                     />
             </div>
-            <Imgwrapper className="about__img-wrapper panel3">
+            <Imgwrapper className="about__img-wrapper panel4">
             <ProgressiveImage
                 src={img2}
                 placeholder={img2Comp}

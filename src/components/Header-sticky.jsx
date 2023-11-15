@@ -9,7 +9,7 @@ function HeaderSticky(){
     const[isMenuVisible, setIsMenuVisible] = useState(false);
     const isSmScrn = useMediaQuery({ query: '(min-width: 600px)' })
 
-    function handleDropDrown(){
+    function handleDropDown(){
         setIsMenuVisible(!isMenuVisible);
     }
 
@@ -55,21 +55,24 @@ function HeaderSticky(){
     //</motion.nav>
     <div className="headerSticky">
     <div className="headerSticky__icons left">
-            <HeaderIcon
-            src={"../src/assets/account.svg"} 
-            alt={"account"} 
-            btnClass={"headerSticky__icon account"}
-            />
-            <HeaderIcon
-            src={"../src/assets/heart.svg"} 
-            alt={"wishlist"} 
-            btnClass={"headerSticky__icon heart"}
-            />
-            <HeaderIcon
-            src={"../src/assets/cart.svg"} 
-            alt={"cart"} 
-            btnClass={"headerSticky__icon cart"}
-            />
+            <button
+                type= "button"
+                className="headerSticky__icon account material-symbols-outlined"
+            >
+                person
+            </button>
+            <button
+                type= "button"
+                className="headerSticky__icon heart material-symbols-outlined"
+            >
+                favorite
+            </button>
+            <button
+                type= "button"
+                className="headerSticky__icon bag material-symbols-outlined"
+            >
+                local_mall
+            </button>
      </div>
      {isSmScrn ? <ul className="headerSticky__list row">
                 <li>Shop</li>
@@ -84,23 +87,25 @@ function HeaderSticky(){
         />
         </div>}
      <div className="headerSticky__icons right">
-            <HeaderIcon
-            src={"../src/assets/search.svg"} 
-            alt={"search"} 
-            btnClass={"headerSticky__icon search"}
-            />
+            <button
+                type= "button"
+                className="headerSticky__icon search material-symbols-outlined"
+            >
+                search
+            </button>
         {isSmScrn ? <HeaderIcon
             src={"../src/assets/methuselah-logo.svg"}
             alt={"methuselah logo"}
             btnClass={"headerSticky__icon logo"}
         /> 
             :
-            <HeaderIcon 
-            src={"../src/assets/menu.svg"}
-            alt={"menu"}
-            btnClass={`headerSticky__icon menu ${isSmScrn ? 'hidden': ""}`}
-            onClick={handleDropDrown}
-            />
+            <button
+                type= "button"
+                className="headerSticky__icon menu material-symbols-outlined"
+                onClick = {handleDropDown}
+            >
+                menu
+            </button>
             }
      </div>
      {isMenuVisible && <ul className="headerSticky__list">

@@ -79,13 +79,20 @@
     }
 
     &__icon {
-        // width: 1.4rem;
-        // height: 1.4rem;
         filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(96%) contrast(103%);
         cursor: pointer;
+        background: none;   
+        padding: 0;
 
-        width: 1.7rem;
-        height: 1.7rem;
+        &.material-symbols-outlined {
+            font-size: 27px;
+
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
 
             @include breakpoint(sm, min){
                 width: 1.9rem;

@@ -4,6 +4,7 @@
     @include flexCenter(column, center, center);
     line-height: 1.5;
     &__intro {
+        max-width: 600px;
         @include flexCenter(column, center, center);
         @include breakpoint(sm, min){
                 padding-inline: 1.5em;
@@ -38,15 +39,15 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-            width: 80%
+            width: 90%
         }
 
         @include breakpoint(lg, min){
-            width: 70%;
+            width: 80%;
         }
 
         @include breakpoint(xlg, min){
-            width: 60%;
+            width: 65%;
         }
     }
     
@@ -60,41 +61,22 @@
             
         }
 
-        &.panel1 {
-            @include breakpoint(sm, max){
-                order: 1;
-            }
-        }
+        @include breakpoint(md){
+
         &.panel2 {
-            @include breakpoint(sm, max){
                 order: 2;
-            }
         }
+
         &.panel3 {
-            @include breakpoint(sm, max){
                 order: 4;
-            }
         }
-        &.panel4 {
-            @include breakpoint(sm, max){
-                order: 3;
-            }
-        }
+    }
     }
 
     &__img-wrapper {
         @include flexCenter(row, center, center);
         border: 7px solid var(--color-grey-light-2);
-        width: 85%;
         overflow: hidden;
-
-        @include breakpoint(sm, min){
-            width: 65%;
-        }
-
-        @include breakpoint(md, min){
-            width: 100%;
-        }
 
         & img {
         
@@ -108,6 +90,18 @@
         &:focus {
           border-color: var(--color-primary);
         }
+        
+
+        @include breakpoint(md){
+        width: 90%;
+        height: 500px;
+        &.panel1 {
+            order: 1;
+        }
+
+        &.panel4 {
+                order: 3;
+        }}
     }
 
     &__img {
@@ -118,8 +112,6 @@
             @extend %image-loading
             }
     }
-
-    
 
     &__values {
        padding-inline: 15px;  
@@ -136,9 +128,10 @@
          }
        }
     }
+
     &__locations {
-        @include flexCenter(column, flex-start, center);
-        padding-inline: 15px;
+        @include flexCenter(column, center, center);
+        // padding-inline: 15px;
         margin-block-end: 30px;
 
         @include breakpoint(md, min){
@@ -155,13 +148,22 @@
             ul {
                 padding-inline-start: 30px;
                 margin-top: 0;
+                list-style-type: none;
 
                 h3 {
                     font-size: 1.3em;
+                    @include breakpoint(sm, min){
+                        font-size: 1.35rem;
+                    }
                 }
 
                 li {
-                    font-size: 1.2em;
+                    font-size: 1.1rem;
+                    max-width: 260px;
+
+                    @include breakpoint(sm, min){
+                        font-size: 1.15rem;
+                    }
                 }
             }
         }

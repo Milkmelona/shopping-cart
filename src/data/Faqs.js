@@ -2,12 +2,12 @@ const faqs = {
     general: [
       {
         id:"general-1",
-        question: "What is the inspiration behind Cosmic Charms' celestial theme?",
+        question: "What is the inspiration behind Methuselah's celestial theme?",
         answer: "Our inspiration comes from the beauty of the night sky, constellations, and the mystique of the cosmos. We believe in celebrating the wonder of the universe through our jewelry."
       },
       {
         id:"general-2",
-        question: "Is the jewelry at Cosmic Charms ethically sourced?",
+        question: "Is the jewelry at Methuselah ethically sourced?",
         answer: "Yes, we are committed to ethical practices. We source gemstones and materials from reputable suppliers who adhere to ethical and sustainable standards."
       },
       {
@@ -17,7 +17,7 @@ const faqs = {
       },
       {
         id:"general-4",
-        question: "Can I join the Cosmic Charms community without making a purchase?",
+        question: "Can I join the Methuselah community without making a purchase?",
         answer: "Of course! You can join our online community, engage in discussions, and participate in celestial events even if you haven't made a purchase. We welcome all cosmic enthusiasts."
       }
     ],
@@ -58,7 +58,7 @@ const faqs = {
       },
       {
         id:"ordering-3",
-        question: "What payment methods are accepted for ordering from Cosmic Charms?",
+        question: "What payment methods are accepted for ordering from Methuselah?",
         answer: "We accept major credit cards, including Visa, MasterCard, and American Express, as well as PayPal for your convenience."
       },
       {

@@ -1,0 +1,32 @@
+@import './utils';
+
+.search {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: white;
+    z-index: 10;
+    padding: 15px;
+
+    &__btn {
+        background: none;
+
+        &.submit {
+            background-color: #cb9d90;
+            padding-inline: 10px;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        gap: 10px;
+    }
+    &__input {
+        flex-grow: 1;
+        padding: 20px
+    }
+
+}

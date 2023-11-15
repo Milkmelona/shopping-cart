@@ -10,6 +10,7 @@ import Shop from './pages/Shop'
 import Faqs from './pages/faqs'
 import About from './pages/About'
 
+
 function App() {
   
   const[IsSticky, setIsSticky] = useState(false)
@@ -38,10 +39,10 @@ function App() {
       <HeaderSticky/>
       ) : (
       <Header/>)}
-      {/* <Homepage/> */}
+      <Homepage/>
       {/* <About/> */}
       {/* <Shop/> */}
-      <Faqs/>
+      {/* <Faqs/> */}
       <Footer/>
     </>
   )
