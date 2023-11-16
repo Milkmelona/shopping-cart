@@ -6,26 +6,31 @@ function Searchpanel({
 }) {
 
     return (
-        <div className="search">
+        <>
+        <div className="searchpanel__overlay">
+        </div>   
+        <div className="searchpanel">
             <button
             type="button"
-            className="search__btn back material-symbols-outlined"
+            className="searchpanel__btn back material-symbols-outlined"
             onClick={onClick}
             >
                 arrow_back_ios
             </button>
             <h2>Seach Our Collection</h2>
-            <form className="search__wrapper">
-            <input type="search" className="search__input" autoComplete="off" />
+            <form className="searchpanel__wrapper">
+            <input type="search" className="searchpanel__input" autoComplete="off" />
             <button
             type="submit"
-            className="search__btn submit material-symbols-outlined"
+            className="searchpanel__btn submit material-symbols-outlined"
             >
                 go
             </button>
             </form>
-            <div className="search__results"></div>
+            <div className="searchpanel__results"></div>
         </div>
+        </>
+
     )
 }
 

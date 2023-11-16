@@ -3,14 +3,24 @@ import { useState } from "react";
 import HeaderIcon from "./HeaderButtons";
 import { useMediaQuery } from "react-responsive";
 import "../styles/headerSticky.scss"
+import Searchpanel from "./Searchpanel";
 
 function HeaderSticky(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
+    const[isSearchVisible, setIsSearchVisible] = useState(false);
     const isSmScrn = useMediaQuery({ query: '(min-width: 600px)' })
 
     function handleDropDown(){
         setIsMenuVisible(!isMenuVisible);
+    }
+
+    function handleSearchBtn(){
+        setIsSearchVisible(!isSearchVisible);
+
+        if (isMenuVisible){
+        handleDropDown();
+        }
     }
 
     return(
@@ -90,6 +100,7 @@ function HeaderSticky(){
             <button
                 type= "button"
                 className="headerSticky__icon search material-symbols-outlined"
+                onClick={handleSearchBtn}
             >
                 search
             </button>
@@ -114,7 +125,12 @@ function HeaderSticky(){
                 <li>About Us</li>
                 <li>FAQs</li>
             </ul>}
+    {isSearchVisible ? 
+        <Searchpanel
+        onClick= {handleSearchBtn}/>
+        : ""}
      </div>
+     
     )
 }
 
