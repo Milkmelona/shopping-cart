@@ -11,10 +11,7 @@
         @include breakpoint(sm, min){
             padding-block: 20px;
         }
-
-    & span {
-        font-size: 30px
-    }
+        
     &__list {
         @include flexCenter(column, center, center);
         position:absolute;

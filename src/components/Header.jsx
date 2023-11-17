@@ -5,13 +5,19 @@ import HeaderIcon from "./HeaderButtons";
 import NavBar from "./Navigation";
 import { useMediaQuery } from 'react-responsive';
 import Searchpanel from "./Searchpanel";
+import LogIn from "./LogIn";
 
 function Header(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
     const[isSearchVisible, setIsSearchVisible] = useState(false)
     const isMedScrn = useMediaQuery({ query: '(min-width: 900px)' })
-        
+    const[isLogInVisible, setIsLogInVisible] = useState(false);
+    
+    function handleAccount(){
+        setIsLogInVisible(!isLogInVisible);
+    }
+
     function handleDropDown(){
         setIsMenuVisible(!isMenuVisible);
     }   
@@ -93,6 +99,7 @@ return (
             <button
                 type= "button"
                 className="header__icon account material-symbols-outlined"
+                onClick={handleAccount}
             >
                 person
             </button>
@@ -117,8 +124,13 @@ return (
         </div>
         {isSearchVisible ? 
             <Searchpanel
-            onClick= {handleSearchBtn}/>
+            handleClick= {handleSearchBtn}/>
         : ""}
+        {isLogInVisible ?
+            <LogIn
+            handleClick={handleAccount}/>
+        : ""
+        }
     
     </div>
 )

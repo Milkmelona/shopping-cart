@@ -11,6 +11,7 @@ import Faqs from './pages/faqs'
 import About from './pages/About'
 
 
+
 function App() {
   
   const[IsSticky, setIsSticky] = useState(false)

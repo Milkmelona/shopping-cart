@@ -4,12 +4,14 @@ import HeaderIcon from "./HeaderButtons";
 import { useMediaQuery } from "react-responsive";
 import "../styles/headerSticky.scss"
 import Searchpanel from "./Searchpanel";
+import LogIn from "./LogIn";
 
 function HeaderSticky(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
     const[isSearchVisible, setIsSearchVisible] = useState(false);
     const isSmScrn = useMediaQuery({ query: '(min-width: 600px)' })
+    const[isLogInVisible, setIsLogInVisible] = useState(false);
 
     function handleDropDown(){
         setIsMenuVisible(!isMenuVisible);
@@ -21,6 +23,10 @@ function HeaderSticky(){
         if (isMenuVisible){
         handleDropDown();
         }
+    }
+
+    function handleAccount(){
+        setIsLogInVisible(!isLogInVisible);
     }
 
     return(
@@ -68,6 +74,7 @@ function HeaderSticky(){
             <button
                 type= "button"
                 className="headerSticky__icon account material-symbols-outlined"
+                onClick={handleAccount}
             >
                 person
             </button>
@@ -129,8 +136,11 @@ function HeaderSticky(){
         <Searchpanel
         onClick= {handleSearchBtn}/>
         : ""}
-     </div>
-     
+    {isLogInVisible ?
+            <LogIn
+            handleClick={handleAccount}/>
+        : "" }
+     </div> 
     )
 }
 

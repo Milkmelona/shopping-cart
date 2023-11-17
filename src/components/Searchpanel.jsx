@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/search.scss";
 
 function Searchpanel({
-    onClick
+    handleClick
 }) {
 
     return (
@@ -13,7 +13,7 @@ function Searchpanel({
             <button
             type="button"
             className="searchpanel__btn back material-symbols-outlined"
-            onClick={onClick}
+            onClick={handleClick}
             >
                 arrow_back_ios
             </button>
