@@ -28,11 +28,23 @@
         @include flexCenter(column, flex-start, center);
 
         @include breakpoint(sm, min){
-            padding: 20px 25px 50px 30px;
+            padding: 20px 25px 50px 25px;
+
+        @include breakpoint(md, min){
+            padding: 20px 35px 50px 35px;
+        }
         }
 
         h2 {
             margin: 0;
+
+            @include breakpoint(md, min){
+                font-size: 25px;
+            }
+
+            @include breakpoint(xxlg, min){
+                font-size: 28px;
+            }
         }
 
         a{
@@ -65,10 +77,23 @@
 
             @include breakpoint(sm, min){
                 width: 250px;
+                font-size: 1.2em;
             }
 
             @include breakpoint(md, min){
                 width: 270px;
+                
+            }
+
+            @include breakpoint(xxlg, min){
+                width: 290px;
+                
+            }
+        }
+
+        label {
+            @include breakpoint(md, min){
+                font-size: 1.3em;
             }
         }
 

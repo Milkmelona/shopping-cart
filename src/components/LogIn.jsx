@@ -11,6 +11,10 @@ function LogIn({
         setIsRegistered(!isRegistered);
     }
 
+    function handleForgotPw(){
+        //DO SOMETHING
+    }
+
     return (
 
     <main className="logIn"> 
@@ -33,18 +37,22 @@ function LogIn({
                 <label htmlFor="userName">Username*</label>
                 <input type="text" name="userName" id="userName" />
             </> }
-            <label htmlFor="email">Email or Username*</label>
+            <label htmlFor="email">{isRegistered ? "Email or Username*" : "Email*"}</label>
             <input type="email" name="email" id="emailLogIn" />
             <label htmlFor="password">Password*</label>
             <input type="password" name="password" id="password"/>
-            <button type="submit">Sign In</button>
+            <button type="submit">{isRegistered ? "Sign In" : "Sign Up"}</button>
         </form>
-        <span>{isRegistered
-                ? "Don't have an account? "
-                : "Already have an account? "}
-            <a onClick={handleRegistration}>
-                {isRegistered ? "Register here" : "Sign in here"}
-            </a></span>
+        <span>
+            {isRegistered ?
+            <>Don't have an account? <a onClick={handleRegistration}>Register here</a>
+            <br/>
+            <a onClick={handleForgotPw}>Forgot Password?</a>
+            </>
+            : 
+            <>Already have an account? <a onClick={handleRegistration}>Sign in here</a></>
+            }
+        </span>
         </div>
     </main>
     
