@@ -2,8 +2,8 @@ import React from "react";
 import Flickity from "react-flickity-component";
 import ProgressiveImage from "react-progressive-graceful-image";
 import heroImages from "../data/heroData";
-import "../styles/hero.scss"
-import Buttons from "./Buttons"
+import "../styles/hero.scss";
+import Buttons from "./Buttons";
 
 function Hero(){
     const flickityOptions = {

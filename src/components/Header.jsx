@@ -52,6 +52,7 @@ return (
             <button
                 type= "button"
                 className="header__icon account material-symbols-outlined"
+                onClick={handleAccount}
             >
                 person
             </button>
