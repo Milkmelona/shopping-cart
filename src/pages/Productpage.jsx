@@ -10,7 +10,7 @@ function ProductPage(){
     const product = productInfo.find((item)=> item.id === productId);
 
     const[isFavorite, setIsFavorite] = useState(false);
-    const[isAdded, setIsAdded] = useState(false);
+    
     const[cartItems, setCartItems] = useState([]);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
 
@@ -18,19 +18,29 @@ function ProductPage(){
         setIsFavorite(!isFavorite);
     }
 
-    function handleQuantity(){
+    function handleQuantity(e){
+        const value = e.target.value;
+        setSelectedQuantity(value);
+    }
 
+    function isItemInCart(){
+        return cartItems.includes((id) => id === product.id);
     }
 
     function handleCart(){
-        setCartItems( () => [
+        if (isItemInCart) {
+            const addedProduct = cartItems.find((item)=> item.id === product.id);
+            addedProduct.quantity = selectedQuantity;
+        }
+        else {
+        setCartItems(() => [
             ...cartItems,
             {id: product.id,
              quantity: selectedQuantity 
             }
         ]
         )
-    }
+    }}
 
     return (
         <main className="pp">
@@ -45,7 +55,7 @@ function ProductPage(){
 
                     <p>{product.description}</p>
                     <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max={product.quantity} onInput={handleQuantity}/>
+                    <input type="number" id="quantity" name="quantity" min="1" max={product.quantity} onInput={handleQuantity(e)}/>
                     <button
                         type="button"
                         className="pp__cart" 
