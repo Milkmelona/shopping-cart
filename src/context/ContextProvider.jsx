@@ -1,5 +1,3 @@
-import { prototype } from "flickity";
-import { Children } from "react";
 import { useEffect, useState, useMemo } from "react";
 import CartContext from "./CartContext";
 

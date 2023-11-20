@@ -3,14 +3,14 @@ import { useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
 import productInfo from "../data/prodImages";
 import Imgwrapper from "../components/Imagewrapper";
-import ContextProvider from "../context/ContextProvider";
+import CartContext from "../context/CartContext";
 import "../styles/Productpage.scss";
 
 function ProductPage(){
     const[isFavorite, setIsFavorite] = useState(false);
     const[product, setProduct] = useState(emptyProduct);
     const[inCart, setInCart] = useState(false);
-    const[cartItems, setCartItems] = useContext(ContextProvider);
+    const[cartItems, setCartItems] = useContext(CartContext);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
     const {productId} = useParams();
 
@@ -53,7 +53,7 @@ function ProductPage(){
     
 
     function handleCart(){
-        if (isItemInCart) {
+        if (inCart) {
             const addedProduct = cartItems.find((item)=> item.id === product.id);
             addedProduct.quantity += selectedQuantity;
         }
