@@ -1,18 +1,37 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
 import productInfo from "../data/prodImages";
 import Imgwrapper from "../components/Imagewrapper";
+import ContextProvider from "../context/ContextProvider";
 import "../styles/Productpage.scss";
 
 function ProductPage(){
-    const {productId} = useParams();
-    const product = productInfo.find((item)=> item.id === productId);
-
     const[isFavorite, setIsFavorite] = useState(false);
-    
-    const[cartItems, setCartItems] = useState([]);
+    const[product, setProduct] = useState(emptyProduct);
+    const[inCart, setInCart] = useState(false);
+    const[cartItems, setCartItems] = useContext(ContextProvider);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
+    const {productId} = useParams();
+
+    const emptyProduct = {
+        name: "",
+        price: "",
+        alt: "",
+        id: "",
+        quantity: '',
+        number:'',
+        description: '',
+        image: '',
+        compressedImg: ''
+    }
+    useEffect(() => {
+        const item = productInfo.find((item)=> item.id === productId);
+
+        setProduct(() => item || emptyProduct)
+    }, [productId]);
+    
+
 
     function handleFavorite(){
         setIsFavorite(!isFavorite);
@@ -23,14 +42,20 @@ function ProductPage(){
         setSelectedQuantity(value);
     }
 
-    function isItemInCart(){
-        return cartItems.includes((id) => id === product.id);
-    }
+    useEffect(() => {
+
+        function isItemInCart(){
+            return cartItems.includes((id) => id === product.id);
+        }
+
+        if (isItemInCart) setInCart(true); 
+    }, [cartItems, productId])
+    
 
     function handleCart(){
         if (isItemInCart) {
             const addedProduct = cartItems.find((item)=> item.id === product.id);
-            addedProduct.quantity = selectedQuantity;
+            addedProduct.quantity += selectedQuantity;
         }
         else {
         setCartItems(() => [
