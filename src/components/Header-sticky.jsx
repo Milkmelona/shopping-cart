@@ -5,6 +5,7 @@ import { useMediaQuery } from "react-responsive";
 import "../styles/headerSticky.scss"
 import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
+import NavBar from "./Navigation";
 
 function HeaderSticky(){
 
@@ -30,45 +31,6 @@ function HeaderSticky(){
     }
 
     return(
-         // <motion.nav
-    //     initial={{ opacity: 0, y: -20 }}
-    //     animate={{ opacity: 1, y: 0 }}
-    //     exit={{ opacity: 0, y: -20 }}
-    //     className="navBar"
-    // >
-    //      <ul className="navBar__links">
-    //     <NavLink
-    //       to="/products"
-    //       className="navBar__link
-    //       "
-    //     >
-    //       Collection
-    //     </NavLink>
-    //     <NavLink
-    //       to="/products/eyeglasses"
-    //       className="navBar__link
-    //       "
-    //     >
-    //       Look Book
-    //     </NavLink>
-    //     <NavLink
-    //       to="/products/sunglasses"
-    //       className="navBar__link
-    //       "
-    //     >
-    //       About Us
-    //     </NavLink>
-
-    //     <NavLink
-    //       to="/about"
-    //       className="navBar__link
-    //       "
-    //     >
-    //       FAQs
-    //     </NavLink>
-    // </ul>
-             
-    //</motion.nav>
     <div className="headerSticky">
     <div className="headerSticky__icons left">
             <button
@@ -91,12 +53,9 @@ function HeaderSticky(){
                 local_mall
             </button>
      </div>
-     {isSmScrn ? <ul className="headerSticky__list row">
-                <li>Shop</li>
-                <li>Collection</li>
-                <li>About Us</li>
-                <li>FAQs</li>
-            </ul> : <div className="headerSticky__logo">
+     {isSmScrn ? <div className="headerSticky__list row">
+                <NavBar/>
+            </div> : <div className="headerSticky__logo">
         <HeaderIcon
             src={"../src/assets/methuselah-logo.svg"}
             alt={"methuselah logo"}
@@ -126,15 +85,12 @@ function HeaderSticky(){
             </button>
             }
      </div>
-     {isMenuVisible && <ul className="headerSticky__list">
-                <li>Shop</li>
-                <li>Collection</li>
-                <li>About Us</li>
-                <li>FAQs</li>
-            </ul>}
+     {isMenuVisible && <div className="headerSticky__list">
+            <NavBar/>
+            </div>}
     {isSearchVisible ? 
         <Searchpanel
-        onClick= {handleSearchBtn}/>
+        handleClick= {handleSearchBtn}/>
         : ""}
     {isLogInVisible ?
             <LogIn

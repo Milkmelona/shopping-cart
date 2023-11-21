@@ -4,7 +4,19 @@ import { useParams } from "react-router-dom";
 import productInfo from "../data/prodImages";
 import Imgwrapper from "../components/Imagewrapper";
 import CartContext from "../context/CartContext";
-import "../styles/Productpage.scss";
+import "../styles/productpage.scss";
+
+const emptyProduct = {
+    name: "",
+    price: "",
+    alt: "",
+    id: "",
+    quantity: '',
+    number:'',
+    description: '',
+    image: '',
+    compressedImg: ''
+}
 
 function ProductPage(){
     const[isFavorite, setIsFavorite] = useState(false);
@@ -13,18 +25,6 @@ function ProductPage(){
     const[cartItems, setCartItems] = useContext(CartContext);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
     const {productId} = useParams();
-
-    const emptyProduct = {
-        name: "",
-        price: "",
-        alt: "",
-        id: "",
-        quantity: '',
-        number:'',
-        description: '',
-        image: '',
-        compressedImg: ''
-    }
     useEffect(() => {
         const item = productInfo.find((item)=> item.id === productId);
 
@@ -69,18 +69,22 @@ function ProductPage(){
 
     return (
         <main className="pp">
-            <div className="pp_details">
-                <Imgwrapper className="">
+            <div className="pp__details">
+                <Imgwrapper className="pp__img-wrapper">
                     <img src={product.image} alt={product.alt} />
                 </Imgwrapper>
 
-                <div className="pp_text">
-                    <h2>{product.name}</h2>
-                    <h3>{product.price}</h3>
-
+                <div className="pp__wrapper">
+                    <div className="pp__wrapper-text">
+                        <h2>{product.name}</h2>
+                        <h3>{product.price}</h3>
+                    </div>
                     <p>{product.description}</p>
-                    <label for="quantity">Quantity</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max={product.quantity} onInput={handleQuantity(e)}/>
+                    <div className="pp__wrapper-quantity">
+                    <label htmlFor="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max={product.quantity} onInput={handleQuantity} required/>
+                    </div>
+                    <div className="pp__wrapper-btn">
                     <button
                         type="button"
                         className="pp__cart" 
@@ -94,6 +98,7 @@ function ProductPage(){
                     >
                         favorite
                     </button>
+                    </div>
                 </div>
             </div>
         </main>

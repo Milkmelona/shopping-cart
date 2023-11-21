@@ -1,7 +1,8 @@
 import { useEffect, useState, useMemo } from "react";
 import CartContext from "./CartContext";
+import PropTypes from 'prop-types';
 
-function ContextProvider(){
+function ContextProvider({children}){
 
     const[cart, setCart] = useState(JSON.parse(localStorage.getItem('myCart')) || []);
 

@@ -7,7 +7,7 @@ function ProductItem({productItems}){
     return (
         <>
         {productItems.map((product) => (
-            //  <Link to={`/products/${product.id}`} key= {product.name}>
+             <Link to={`/shop/${product.id}`} key= {product.name}>
                     <div className="shop__products-item"  key={product.name}>
                         <div className="shop__products-img-wrapper">
                         <ProgressiveImage 
@@ -31,7 +31,7 @@ function ProductItem({productItems}){
                         <div className="shop__products-item-price">{product.price}</div>
                         </div>
                     </div>
-            // </Link>   
+            </Link>   
             ))     
             }
         </>

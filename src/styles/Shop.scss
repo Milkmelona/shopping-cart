@@ -63,6 +63,16 @@
             }
     }
 
+    a {
+        cursor: pointer;
+        color: black;
+        text-decoration: none;
+        &:visited {
+            color: black;
+        }
+
+    }
+
     #product-sorter {
         font-size: 1em;
         padding: 8px;

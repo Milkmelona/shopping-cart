@@ -150,8 +150,18 @@
         gap: 15px;
     }
 
-    & li {
+    a {
         cursor: pointer;
+        text-decoration: none;
+        &:visited {
+            color: black;
+        }
+
+        &:hover,
+        &:active {
+            color: white;
+        }
+
         @include breakpoint(sm, min){
             text-transform: uppercase;
         }
