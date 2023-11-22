@@ -44,7 +44,7 @@ return (
         {isMedScrn ? <div className="header__list flex">
             <button
                 type= "button"
-                class="header__icon search material-symbols-outlined"
+                className="header__icon search material-symbols-outlined"
                 onClick={handleSearchBtn}
             >
                 search

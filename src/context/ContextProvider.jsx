@@ -9,7 +9,7 @@ function ContextProvider({children}){
     const value = useMemo(()=> [cart, setCart], [cart]);
 
     useEffect(()=>{
-        localStorage.setItem('myCart', JSON.stringify([cart]), [cart]);
+        localStorage.setItem('myCart', JSON.stringify(cart), [cart]);
     })
 
     return(

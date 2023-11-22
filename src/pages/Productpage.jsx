@@ -39,33 +39,35 @@ function ProductPage(){
 
     function handleQuantity(e){
         const value = e.target.value;
+        console.log(value);
         setSelectedQuantity(value);
     }
 
     useEffect(() => {
-
-        function isItemInCart(){
-            return cartItems.includes((id) => id === product.id);
-        }
-
-        if (isItemInCart) setInCart(true); 
+        setInCart(() => cartItems.some((item) => item.id === product.id)); 
     }, [cartItems, productId])
     
 
     function handleCart(){
+        const quantityToAdd = parseInt(selectedQuantity);
         if (inCart) {
-            const addedProduct = cartItems.find((item)=> item.id === product.id);
-            addedProduct.quantity += selectedQuantity;
+            const updatedItems = cartItems.map((item) => 
+            item.id === productId
+                ? {...item, quantity: item.quantity + quantityToAdd}
+                : item
+            );
+            setCartItems(updatedItems);
         }
         else {
         setCartItems(() => [
             ...cartItems,
             {id: product.id,
-             quantity: selectedQuantity 
+             quantity: quantityToAdd 
             }
         ]
-        )
-    }}
+         )
+      }
+}
 
     return (
         <main className="pp">
