@@ -13,6 +13,7 @@ import Faqs from './pages/faqs'
 import About from './pages/About'
 import ContextProvider from './context/ContextProvider';
 import ProductPage from './pages/Productpage';
+import Cart from './pages/Cart';
 
 function MainRoutes(){
   const[IsSticky, setIsSticky] = useState(false)
@@ -48,6 +49,7 @@ function MainRoutes(){
               <Route path="/shop/:productId" element={<ProductPage/>}/>
               <Route path="/faqs" element={<Faqs/>}/>
               <Route path="/about" element={<About/>}/>
+              <Route path="/cart" element={<Cart/>}/>
           </Routes>
           <Footer/>
         </ContextProvider>

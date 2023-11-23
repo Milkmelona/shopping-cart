@@ -6,7 +6,8 @@ import NavBar from "./Navigation";
 import { useMediaQuery } from 'react-responsive';
 import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
-
+import Cart from "../pages/Cart";
+import { Link } from "react-router-dom";
 function Header(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
@@ -62,12 +63,12 @@ return (
             >
                 favorite
             </button>
-            <button
-                type= "button"
+            <Link
+                to="/cart"
                 className="header__icon bag material-symbols-outlined"
             >
                 local_mall
-            </button>
+            </Link>
         </div>
         : 
         <div className="header__menu-wrapper">
@@ -110,12 +111,12 @@ return (
             >
                 favorite
             </button>
-            <button
-                type= "button"
+            <Link
+                to="/cart"
                 className="header__icon bag material-symbols-outlined"
             >
                 local_mall
-            </button>
+            </Link>
         </div>}
         </div> 
         }
