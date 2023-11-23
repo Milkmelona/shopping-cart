@@ -30,7 +30,10 @@
             }
 
             td {
-                padding: 18px;
+                padding: 18 px;
+                @include breakpoint(sm, min){
+                    padding: 25px;
+                }
 
                 input {
                     width: 55px;
@@ -47,6 +50,11 @@
         height: 200px;
         padding-bottom: 15px;
         width: 70%;
+
+        @include breakpoint(sm, min){
+            padding-bottom: 20px;
+            width: 80%;
+        }
         
         img {
             width: 100%;
