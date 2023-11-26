@@ -3,6 +3,7 @@ import CartContext from "../context/CartContext";
 import Imgwrapper from "../components/Imagewrapper";
 import productInfo from "../data/prodImages"
 import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 import "../styles/Cart.scss";
 
 function Cart(){
@@ -26,9 +27,11 @@ function Cart(){
             {cartItems.length === 0 && 
                 <div className="cart__empty">
                     <span>Your cart is empty &#128148;</span>
+                    <Link to="/shop">
                     <button type="button">
                         Shop Now
                     </button>
+                    </Link>
                 </div>
             }
             {isMedScrn && cartItems.length !== 0 && (

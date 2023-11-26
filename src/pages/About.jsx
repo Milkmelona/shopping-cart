@@ -6,7 +6,7 @@ import img1Comp from "../assets/Compressed-Unsplash-Images/about-img-1-min.jpg"
 import img2Comp from "../assets/Compressed-Unsplash-Images/about-img-2-min.jpg"
 import Imgwrapper from "../components/Imagewrapper";
 import ProgressiveImage from "react-progressive-graceful-image";
-import Button from "../components/Buttons";
+import { Link } from "react-router-dom";
 
 function About(){
     return(
@@ -39,25 +39,21 @@ function About(){
             <h3>The Birth of Methuselah</h3>
             <p>Our story began with a small group of artisans who shared a common love for celestial wonders. This vision led to the birth of Methuselah, 
             a jewelry store unlike any other, where we aimed to capture the essence of the universe in every piece.</p>
-            <Button
-                    text = {"Shop Now"}
-                    color = {"#c4aeac"}
-                    fontSize ={21}
-                    type = {"button"}
-                    className = {"hero-item__wrapper-btn"}
-                    />
+            <Link to="/shop">
+                <button>
+                    Shop Now
+                </button>
+            </Link>
             </div>
             <div className="about__text-wrapper panel3">
             <h3>Empowering Women Through Time</h3>
             <p>Empowering women to embrace their own inner light, strength, and individuality. 
             We believe that our jewelry serves as a bridge between the ancient wisdom of the stars and the modern woman's journey.</p>
-            <Button
-                    text = {"Shop Now"}
-                    color = {"#c4aeac"}
-                    fontSize ={21}
-                    type = {"button"}
-                    className = {"hero-item__wrapper-btn"}
-                    />
+            <Link to="/shop">
+                <button>
+                    Shop Now
+                </button>
+            </Link>
             </div>
             <Imgwrapper className="about__img-wrapper panel4">
             <ProgressiveImage
