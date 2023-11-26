@@ -124,14 +124,13 @@ return (
         <div className="header__bottom">
        <NavBar/>
         </div>
-        {isSearchVisible ? 
+        {isSearchVisible && 
             <Searchpanel
             handleClick= {handleSearchBtn}/>
-        : ""}
-        {isLogInVisible ?
+        }
+        {isLogInVisible &&
             <LogIn
             handleClick={handleAccount}/>
-        : ""
         }
     
     </div>

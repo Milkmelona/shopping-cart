@@ -39,7 +39,6 @@ function ProductPage(){
 
     function handleQuantity(e){
         const value = e.target.value;
-        console.log(value);
         setSelectedQuantity(value);
     }
 

@@ -88,14 +88,14 @@ function HeaderSticky(){
      {isMenuVisible && <div className="headerSticky__list">
             <NavBar/>
             </div>}
-    {isSearchVisible ? 
+    {isSearchVisible && 
         <Searchpanel
         handleClick= {handleSearchBtn}/>
-        : ""}
-    {isLogInVisible ?
+        }
+    {isLogInVisible &&
             <LogIn
             handleClick={handleAccount}/>
-        : "" }
+    }
      </div> 
     )
 }
