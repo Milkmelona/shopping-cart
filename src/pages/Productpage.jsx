@@ -24,6 +24,7 @@ function ProductPage(){
     const[inCart, setInCart] = useState(false);
     const[cartItems, setCartItems] = useContext(CartContext);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
+    // const[subtotal, setSubtotal]= useState(0);
     const {productId} = useParams();
 
     useEffect(() => {
@@ -52,16 +53,19 @@ function ProductPage(){
               return false;
         }
         ) 
-    }, [cartItems, productId])
+    }, [cartItems, productId]);
     
 
     function handleCart(){
         const quantityToAdd = parseInt(selectedQuantity);
+        const price = parseInt(product.price.slice(1));
+
+        const subtotal = quantityToAdd * price
 
         if (inCart) {
             const updatedItems = cartItems.map((item) => 
             item.id === productId
-                ? {...item, quantity: item.quantity + quantityToAdd}
+                ? {...item, quantity: item.quantity + quantityToAdd, subtotal: item.subtotal + subtotal}
                 : item
             );
             setCartItems(updatedItems);
@@ -70,11 +74,13 @@ function ProductPage(){
         setCartItems(() => [
             ...cartItems,
             {id: product.id,
-             quantity: quantityToAdd 
+             quantity: quantityToAdd, 
+             subtotal: subtotal
             }
         ]
          )
       }
+      console.log(cartItems)
 }
 
     return (
@@ -83,7 +89,6 @@ function ProductPage(){
                 <Imgwrapper className="pp__img-wrapper">
                     <img src={product.image} alt={product.alt} />
                 </Imgwrapper>
-
                 <div className="pp__wrapper">
                     <div className="pp__wrapper-text">
                         <h2>{product.name}</h2>

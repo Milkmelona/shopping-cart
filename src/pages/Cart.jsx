@@ -1,9 +1,10 @@
-import { useState, useContext, useEffect } from "react";
+import { useContext} from "react";
 import CartContext from "../context/CartContext";
-import Imgwrapper from "../components/Imagewrapper";
 import productInfo from "../data/prodImages"
+import getTotal from "../utils/getTotal";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
+import currencyFormat from "../utils/currencyFormat";
 import "../styles/Cart.scss";
 
 function Cart(){
@@ -12,9 +13,13 @@ function Cart(){
     
 
     function handleQuantity(product, value){
+
+        const price = parseInt(product.price.slice(1));
+        const subtotal = value * price
+
         const updatedProducts = cartItems.map((item)=> 
             item.id === product.id
-            ? {...item, quantity: value}
+            ? {...item, quantity: value, subtotal: subtotal}
             : item
             );
 
@@ -56,16 +61,16 @@ function Cart(){
                 return(
                         <tr key={product.id} className="cart__details">
                             <td className="cart__container-img-cell">
-                            <Imgwrapper className="cart__img-wrapper">
+                            <Link to={`/shop/${product.id}`} className="cart__img-wrapper">
                                 <img src={product.image} alt={product.alt} />
-                            </Imgwrapper>
+                            </Link>
                             </td>
                             <td>{product.name}</td>
                             <td>{product.price}</td>
                             <td>
                             <input type="number" value={item.quantity} onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/>
                             </td>
-                            <td>{parseInt(item.quantity) * parseInt(price)}</td>
+                            <td>{currencyFormat(item.subtotal)}</td>
                             <td>
                             <button
                                 type="button"
@@ -89,9 +94,9 @@ function Cart(){
                         <button type="button" className="cart__close material-symbols-outlined"onClick={()=>handleDelete(product)}>
                         close
                         </button>
-                        <Imgwrapper className="cart__img-wrapper">
+                        <Link to={`/shop/${product.id}`} className="cart__img-wrapper">
                             <img src={product.image} alt={product.alt} />
-                        </Imgwrapper>
+                        </Link>
                             <table>
                             <tbody>
                                 <tr>
@@ -108,7 +113,7 @@ function Cart(){
                                 </tr>
                                 <tr>
                                     <td>Subtotal</td>
-                                    <td>{parseInt(item.quantity) * parseInt(price)}</td>
+                                    <td>{currencyFormat(item.subtotal)}</td>
                                 </tr>
                             </tbody>
                             </table>
@@ -118,7 +123,7 @@ function Cart(){
                        }
             {cartItems.length !== 0 && <div className="cart__checkOut">
                 <span className="cart__checkOut-label">total</span>
-                <span className="cart__checkOut-total">P11,500</span>
+                <span className="cart__checkOut-total">{currencyFormat(getTotal())}</span>
                 <span className="cart__checkOut-text">Shipping and taxes computed at checkout</span>
                 <button type="button">
                        Check out
