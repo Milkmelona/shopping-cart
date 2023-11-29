@@ -6,6 +6,7 @@ import "../styles/headerSticky.scss"
 import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
 import NavBar from "./Navigation";
+import { Link } from "react-router-dom";
 
 function HeaderSticky(){
 
@@ -46,12 +47,11 @@ function HeaderSticky(){
             >
                 favorite
             </button>
-            <button
-                type= "button"
-                className="headerSticky__icon bag material-symbols-outlined"
-            >
-                local_mall
-            </button>
+            <Link 
+            to="/cart" 
+            className="headerSticky__icon bag material-symbols-outlined">
+            local_mall
+            </Link>
      </div>
      {isSmScrn ? <div className="headerSticky__list row">
                 <NavBar/>

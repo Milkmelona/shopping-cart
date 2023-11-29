@@ -6,7 +6,6 @@ import NavBar from "./Navigation";
 import { useMediaQuery } from 'react-responsive';
 import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
-import Cart from "../pages/Cart";
 import { Link } from "react-router-dom";
 function Header(){
 

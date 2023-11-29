@@ -25,13 +25,13 @@ function ProductPage(){
     const[cartItems, setCartItems] = useContext(CartContext);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
     const {productId} = useParams();
+
     useEffect(() => {
         const item = productInfo.find((item)=> item.id === productId);
 
-        setProduct(() => item || emptyProduct)
+        setProduct(() => item || emptyProduct);
     }, [productId]);
     
-
 
     function handleFavorite(){
         setIsFavorite(!isFavorite);
@@ -43,12 +43,21 @@ function ProductPage(){
     }
 
     useEffect(() => {
-        setInCart(() => cartItems.some((item) => item.id === product.id)); 
+        setInCart(() => {
+            for (const item of cartItems) {
+                if (item.id === productId) {
+                  return true;
+                }
+              }
+              return false;
+        }
+        ) 
     }, [cartItems, productId])
     
 
     function handleCart(){
         const quantityToAdd = parseInt(selectedQuantity);
+
         if (inCart) {
             const updatedItems = cartItems.map((item) => 
             item.id === productId

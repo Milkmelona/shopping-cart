@@ -73,6 +73,10 @@
         @include breakpoint(sm, min){
             gap: 2px;
         }
+
+        a {
+            text-decoration: none;
+        }
     }
 
     &__icon {

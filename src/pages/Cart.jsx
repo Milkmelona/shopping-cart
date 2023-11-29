@@ -9,16 +9,20 @@ import "../styles/Cart.scss";
 function Cart(){
     const[cartItems, setCartItems] = useContext(CartContext);
     const isMedScrn = useMediaQuery({query: '(min-width: 900px)'});
+    
 
-    function handleQuantity(e){
+    function handleQuantity(product, value){
+        const updatedProducts = cartItems.map((item)=> 
+            item.id === product.id
+            ? {...item, quantity: value}
+            : item
+            );
 
+        setCartItems(updatedProducts); 
     }
     
     function handleDelete(product){
-        const productToBeDeleted = cartItems.find((item)=> item.id === product.id)
-        const index = cartItems.indexOf(productToBeDeleted);
-        cartItems.splice(index, 1);
-        setCartItems([...cartItems])
+        setCartItems(()=> cartItems.filter((item)=> item.id !==product.id));
     }
 
     return(
@@ -59,7 +63,7 @@ function Cart(){
                             <td>{product.name}</td>
                             <td>{product.price}</td>
                             <td>
-                            <input type="number" value={item.quantity} onChange={handleQuantity}/>
+                            <input type="number" value={item.quantity} onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/>
                             </td>
                             <td>{parseInt(item.quantity) * parseInt(price)}</td>
                             <td>
@@ -100,7 +104,7 @@ function Cart(){
                                 </tr>
                                 <tr>
                                     <td>Quantity</td>
-                                    <td><input type="number" value={item.quantity}/></td>
+                                    <td><input type="number" value={item.quantity} onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/></td>
                                 </tr>
                                 <tr>
                                     <td>Subtotal</td>
