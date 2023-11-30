@@ -8,21 +8,18 @@ import ProductItem from "../components/ProductItem";
 import  productInfo  from "../data/prodImages";
 import { useState, useEffect } from "react";
 
+
 function Shop(){
-    const[currentPage, setCurrentPage] = useState(1);
+    const[currentPage, setCurrentPage] = useState(0);
     const ITEMS_PER_PAGE = 12;
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const start = currentPage * ITEMS_PER_PAGE;
     const end = start + ITEMS_PER_PAGE;
     const shownProds = productInfo.slice(start, end)
     const pageCount = Math.ceil(productInfo.length/ITEMS_PER_PAGE)
     
 
-    // function handlePageChange(selectedPage){
-    //     setCurrentPage(selectedPage + 1)
-    // }
-
-    function handlePageChange(){
-        setCurrentPage(currentPage+1)
+    function handlePageChange(selectedPage){
+        setCurrentPage(selectedPage.selected)
     }
 
     return(
@@ -75,8 +72,10 @@ function Shop(){
             </div>
             <ReactPaginate
                 onPageChange={handlePageChange}
-                previousLabel={'previous'}
-                nextLabel={'next'}
+                previousLabel={'< prev'}
+                previousClassName={currentPage === 0 ? 'btn hidden' : 'btn active'} 
+                nextLabel={'next >'}
+                nextClassName={currentPage === pageCount - 1 ? 'btn hidden' : 'btn active'}
                 breakLabel={'...'}
                 pageCount={pageCount}
                 marginPagesDisplayed={2}

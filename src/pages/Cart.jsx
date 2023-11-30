@@ -14,7 +14,7 @@ function Cart(){
 
     function handleQuantity(product, value){
 
-        const price = parseInt(product.price.slice(1));
+        const price = parseInt(product.price);
         const subtotal = value * price
 
         const updatedProducts = cartItems.map((item)=> 
@@ -57,7 +57,7 @@ function Cart(){
                     <tbody className="cart__container">
             {cartItems.map((item) => {
                 const product = productInfo.find((product)=> product.id === item.id);
-                const price = product.price.slice(1);
+               
                 return(
                         <tr key={product.id} className="cart__details">
                             <td className="cart__container-img-cell">
@@ -88,7 +88,7 @@ function Cart(){
                        <div className="cart__container"> {
                         cartItems.map((item) => {
                         const product = productInfo.find((product)=> product.id === item.id);
-                        const price = product.price.slice(1);
+                        
                         return(
                         <div className="cart__details" key={product.id}>
                         <button type="button" className="cart__close material-symbols-outlined"onClick={()=>handleDelete(product)}>

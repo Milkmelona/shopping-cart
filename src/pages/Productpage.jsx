@@ -58,8 +58,7 @@ function ProductPage(){
 
     function handleCart(){
         const quantityToAdd = parseInt(selectedQuantity);
-        const price = parseInt(product.price.slice(1));
-
+        const price = parseInt(product.price);
         const subtotal = quantityToAdd * price
 
         if (inCart) {

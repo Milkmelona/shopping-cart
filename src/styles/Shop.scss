@@ -42,16 +42,41 @@
             }
         }
     }
+
     &__main {
         @include flexCenter(column, center, flex-start);
-        // display: grid;
-        // grid-template-columns: auto 1fr;
-        // width: 100%;
-        
-        // @include breakpoint(xxxl, min) {
-        //     width: 85%;
-        // }
+
+        ul {
+            list-style-type: none;
+            @include flexCenter(row, center, center);
+            gap: 12px;
+            font-size: 1.3em;
+
+            li {
+                text-transform: uppercase;
+
+                &.btn {
+                    padding: 10px;
+                    border: 1px solid #cb9d90;
+                    border-radius: 15px;
+                    font-size: .8em;
+                
+                    &.hidden {
+                        display: none;
+                    }
+
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                &:hover, &:active{
+                    color: #cb9d90;
+                }
+            }
+        }
     }
+
     &__categories {
         grid-column: 1/2;
         text-align: center;

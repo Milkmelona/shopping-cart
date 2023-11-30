@@ -1,6 +1,6 @@
 import React from "react";
 import ProgressiveImage from "react-progressive-graceful-image";
-import ProductPage from "../pages/Productpage";
+import currencyFormat from "../utils/currencyFormat";
 import { Link } from "react-router-dom";
 
 function ProductItem({productItems}){
@@ -28,7 +28,7 @@ function ProductItem({productItems}){
                         </div>
                         <div className="shop__products-item-desc">
                         <h3 className="shop__products-item-title">{product.name}</h3>
-                        <div className="shop__products-item-price">{product.price}</div>
+                        <div className="shop__products-item-price">{currencyFormat(product.price)}</div>
                         </div>
                     </div>
             </Link>   

@@ -1,7 +1,7 @@
 const products = [
     {
         name: "Vega",
-        price: "₱8500",
+        price: "8500",
         alt: "Silver pendant with sapphire",
         id: "aBcDeFgHiJkL",
         quantity: 10,
@@ -11,7 +11,7 @@ const products = [
 
     {
         name: "Lyra",
-        price: "₱12500",
+        price: "12500",
         alt: "Diamond-studded rose gold necklace",
         id: "RstUVwXyZaB1",
         quantity: 8,
@@ -21,7 +21,7 @@ const products = [
 
     {
         name: "Orion",
-        price: "₱19500",
+        price: "19500",
         alt: "Emerald and gold bracelet",
         id: "90AbCdEfGhIjL",
         quantity: 15,
@@ -31,7 +31,7 @@ const products = [
 
     {
         name: "Aquila",
-        price: "₱13500",
+        price: "13500",
         alt: "Amber and copper pendant",
         id: "RstUVwXyZaB2",
         quantity: 7,
@@ -41,7 +41,7 @@ const products = [
 
     {
         name: "Draco",
-        price: "₱16500",
+        price: "16500",
         alt: "Ruby and white gold necklace",
         id: "RstUVwXyZaB3",
         quantity: 11,
@@ -51,7 +51,7 @@ const products = [
 
     {
         name: "Sirius",
-        price: "₱11500",
+        price: "11500",
         alt: "Sapphire and platinum bracelet",
         id: "RstUVwXyZaB4",
         quantity: 2,
@@ -61,7 +61,7 @@ const products = [
 
     {
         name: "Andromeda",
-        price: "₱17500",
+        price: "17500",
         alt: "Diamond-studded rose gold earrings",
         id: "LmNoPqRstUVw",
         quantity: 6,
@@ -71,7 +71,7 @@ const products = [
 
     {
         name: "Leo",
-        price: "₱11500",
+        price: "11500",
         alt: "Emerald and gold ring",
         id: "3RstUVwXyZaB",
         quantity: 9,
@@ -81,7 +81,7 @@ const products = [
 
     {
         name: "Taurus",
-        price: "₱8000",
+        price: "8000",
         alt: "Sapphire and white gold necklace",
         id: "RstUVwXyZaB5",
         quantity: 13,
@@ -91,7 +91,7 @@ const products = [
 
     {
         name: "Pegasus",
-        price: "₱15500",
+        price: "15500",
         alt: "Pearl and silver bracelet",
         id: "LmNoPqRstUVw",
         quantity: 16,
@@ -101,7 +101,7 @@ const products = [
 
     {
         name: "Ursa",
-        price: "₱9000",
+        price: "9000",
         alt: "Diamond and platinum ring",
         id: "wXyZaBcD1234",
         quantity: 4,
@@ -111,7 +111,7 @@ const products = [
     
     {
         name: "Zeles",
-        price: "₱14500",
+        price: "14500",
         alt: "Aquamarine and gold pendant",
         id: "RstUVwXyZaB6",
         quantity: 12,
@@ -121,7 +121,7 @@ const products = [
     
     {
         name: "Pavo",
-        price: "₱18500",
+        price: "18500",
         alt: "Gold ring, earrings, and bracelet",
         id: "vVsfgzZKsoxP",
         quantity: 5,
@@ -131,7 +131,7 @@ const products = [
     
     {
         name: "Venus",
-        price: "₱10500",
+        price: "10500",
         alt: "Silver and moonstone pendant",
         id: "gHwXyZaBcD12",
         quantity: 17,
@@ -141,7 +141,7 @@ const products = [
     
     {
         name: "Libra",
-        price: "₱13500",
+        price: "13500",
         alt: "Diamond and rose gold earrings",
         id: "jKlmNoPqRstU",
         quantity: 1,
@@ -151,7 +151,7 @@ const products = [
     
     {
         name: "Aries",
-        price: "₱9500",
+        price: "9500",
         alt: "Ruby and gold bracelet",
         id: "RstUVwXyZaB7",
         quantity: 19,
@@ -161,7 +161,7 @@ const products = [
     
     {
         name: "Perseus",
-        price: "₱17500",
+        price: "17500",
         alt: "Emerald and silver ring",
         id: "LmNoPqRstUVw",
         quantity: 10,
@@ -172,7 +172,7 @@ const products = [
     
     {
         name: "Cepheus",
-        price: "₱9500",
+        price: "9500",
         alt: "Amethyst and platinum necklace",
         id: "wXyZaBcD1234",
         quantity: 8,
@@ -182,7 +182,7 @@ const products = [
     
     {
         name: "Cygnus",
-        price: "₱12500",
+        price: "12500",
         alt: "Topaz and silver pendant",
         id: "RstUVwXyZa6c",
         quantity: 14,
@@ -192,7 +192,7 @@ const products = [
     
     {
         name: "Leo Minor",
-        price: "₱15500",
+        price: "15500",
         alt: "Sapphire and white gold earrings",
         id: "LmNoPqRstUVw",
         quantity: 7,
@@ -202,7 +202,7 @@ const products = [
     
     {
         name: "Centaurus",
-        price: "₱8000",
+        price: "8000",
         alt: "Garnet and gold bracelet",
         id: "RstUVwXyZ2Bc",
         quantity: 15,
@@ -212,7 +212,7 @@ const products = [
     
     {
         name: "Scorpius",
-        price: "₱14500",
+        price: "14500",
         alt: "Opal and silver ring",
         id: "wXyZaBcD1234",
         quantity: 11,
@@ -222,7 +222,7 @@ const products = [
     
     {
         name: "Lepus",
-        price: "₱11500",
+        price: "11500",
         alt: "Emerald and rose gold necklace",
         id: "RstUVwXyZ3Bc",
         quantity: 3,
@@ -232,7 +232,7 @@ const products = [
     
     {
         name: "Cetus",
-        price: "₱8500",
+        price: "8500",
         alt: "Pearl and platinum pendant",
         id: "RstUVwXy3aBc",
         quantity: 13,
@@ -242,7 +242,7 @@ const products = [
 
     {
         name: "Corvus",
-        price: "₱11500",
+        price: "11500",
         alt: "Emerald and white gold earrings",
         id: "uVwXyZaBcD12",
         quantity: 6,
@@ -252,7 +252,7 @@ const products = [
 
     {
         name: "Hydra",
-        price: "₱8000",
+        price: "8000",
         alt: "Sapphire and silver pendant",
         id: "LmNoPqRstUVw",
         quantity: 9,
@@ -262,7 +262,7 @@ const products = [
 
     {
         name: "Auriga",
-        price: "₱13500",
+        price: "13500",
         alt: "Pearl and rose gold bracelet",
         id: "gHwXyZaBcD12",
         quantity: 4,
@@ -272,7 +272,7 @@ const products = [
 
     {
         name: "Cancer",
-        price: "₱10500",
+        price: "10500",
         alt: "Diamond and gold ring",
         id: "RstUV3XyZaBc",
         quantity: 8,
@@ -282,7 +282,7 @@ const products = [
 
     {
         name: "Scutum",
-        price: "₱15500",
+        price: "15500",
         alt: "Topaz and platinum necklace",
         id: "jKlmNoPqRstU",
         quantity: 12,
@@ -292,7 +292,7 @@ const products = [
 
     {
         name: "Virgo",
-        price: "₱16500",
+        price: "16500",
         alt: "Opal and white gold pendant",
         id: "wXyZaBcD1234",
         quantity: 5,
@@ -302,7 +302,7 @@ const products = [
 
     {
         name: "Eridanus",
-        price: "₱14500",
+        price: "14500",
         alt: "Aquamarine and silver ring",
         id: "R9tUVwXyZaBc",
         quantity: 7,
@@ -312,7 +312,7 @@ const products = [
 
     {
         name: "Altair",
-        price: "₱10500",
+        price: "10500",
         alt: "Platinum engagement ring",
         id: "XyZaBcD123456",
         quantity: 18,
@@ -322,7 +322,7 @@ const products = [
 
     {
         name: "Gemini",
-        price: "₱9500",
+        price: "9500",
         alt: "Opal and silver ring",
         id: "wXyZaBcD1234",
         quantity: 14,
@@ -333,7 +333,7 @@ const products = [
 
     {
         name: "Canis",
-        price: "₱18500",
+        price: "18500",
         alt: "Gold necklace with sapphire pendant",
         id: "vVsfgzZKsoxP",
         quantity: 3,
@@ -343,7 +343,7 @@ const products = [
 
     {
         name: "Cassiopeia",
-        price: "₱7500",
+        price: "7500",
         alt: "Pearl and silver earrings",
         id: "LmNoPqRstUVw",
         quantity: 3,
