@@ -6,17 +6,24 @@ import "../styles/Shop.scss"
 import ReactPaginate from "react-paginate";
 import ProductItem from "../components/ProductItem";
 import  productInfo  from "../data/prodImages";
+import sortedValues from "../components/Sort";
 import { useState, useEffect } from "react";
 
 
 function Shop(){
     const[currentPage, setCurrentPage] = useState(0);
+    const[arrangedProds, setArrangedProds] = useState(productInfo);
+    const[value, setValue] = useState('sale');
     const ITEMS_PER_PAGE = 12;
     const start = currentPage * ITEMS_PER_PAGE;
     const end = start + ITEMS_PER_PAGE;
-    const shownProds = productInfo.slice(start, end)
+    const shownProds = arrangedProds.slice(start, end)
     const pageCount = Math.ceil(productInfo.length/ITEMS_PER_PAGE)
     
+   useEffect(()=> {
+        const sortedProducts = sortedValues(value);
+        setArrangedProds(sortedProducts)
+   }, [value])
 
     function handlePageChange(selectedPage){
         setCurrentPage(selectedPage.selected)
@@ -49,7 +56,7 @@ function Shop(){
             <section className="shop__main">
                 <div className="shop__product-sorter">
                     <label htmlFor="product-sorter">
-                    <select name="product-sorter" id="product-sorter">
+                    <select name="product-sorter" id="product-sorter" onChange={(e) => setValue(e.target.value)}>
                         <option value="sale">Sale</option>
                         <option value="recommended">Recommended</option>
                         <option value="price-ascending">Price: Low to High</option>

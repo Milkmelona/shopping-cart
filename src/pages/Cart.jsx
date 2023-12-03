@@ -68,7 +68,7 @@ function Cart(){
                             <td>{product.name}</td>
                             <td>{product.price}</td>
                             <td>
-                            <input type="number" value={item.quantity} onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/>
+                            <input type="number" value={item.quantity} min='1' onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/>
                             </td>
                             <td>{currencyFormat(item.subtotal)}</td>
                             <td>
@@ -109,7 +109,7 @@ function Cart(){
                                 </tr>
                                 <tr>
                                     <td>Quantity</td>
-                                    <td><input type="number" value={item.quantity} onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/></td>
+                                    <td><input type="number" value={item.quantity} min='1' onChange={(e)=> handleQuantity(product, parseInt(e.target.value, 10))}/></td>
                                 </tr>
                                 <tr>
                                     <td>Subtotal</td>
