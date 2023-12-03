@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import productInfo from "../data/prodImages";
 import Imgwrapper from "../components/Imagewrapper";
 import CartContext from "../context/CartContext";
+import currencyFormat from "../utils/currencyFormat";
 import "../styles/productpage.scss";
 
 const emptyProduct = {
@@ -24,7 +25,6 @@ function ProductPage(){
     const[inCart, setInCart] = useState(false);
     const[cartItems, setCartItems] = useContext(CartContext);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
-    // const[subtotal, setSubtotal]= useState(0);
     const {productId} = useParams();
 
     useEffect(() => {
@@ -91,7 +91,7 @@ function ProductPage(){
                 <div className="pp__wrapper">
                     <div className="pp__wrapper-text">
                         <h2>{product.name}</h2>
-                        <h3>{product.price}</h3>
+                        <h3>{currencyFormat(product.price)}</h3>
                     </div>
                     <p>{product.description}</p>
                     <div className="pp__wrapper-quantity">

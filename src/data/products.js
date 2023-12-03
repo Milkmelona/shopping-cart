@@ -3,7 +3,7 @@ const products = [
         name: "Vega",
         price: "8500",
         alt: "Silver pendant with sapphire",
-        id: "aBcDeFgHiJkL",
+        id: "aBczeFgHiJkL",
         quantity: 10,
         number:1,
         description: "The Vega silver pendant boasts a mesmerizing sapphire, adding an air of elegance and sophistication to your ensemble."
@@ -23,7 +23,7 @@ const products = [
         name: "Orion",
         price: "19500",
         alt: "Emerald and gold bracelet",
-        id: "90AbCdEfGhIjL",
+        id: "90AbC5EfGhIjL",
         quantity: 15,
         number:3,
         description: "Wrap your wrist in opulence with the Orion gold bracelet, showcasing vibrant emeralds that reflect the allure of nature's beauty."
@@ -63,7 +63,7 @@ const products = [
         name: "Andromeda",
         price: "17500",
         alt: "Diamond-studded rose gold earrings",
-        id: "LmNoPqRstUVw",
+        id: "LmNoPqRstUaw",
         quantity: 6,
         number:7,
         description: "Illuminate your look with the Andromeda rose gold earrings, a dazzling display of diamonds that adds a touch of glamour to any occasion."
@@ -93,7 +93,7 @@ const products = [
         name: "Pegasus",
         price: "15500",
         alt: "Pearl and silver bracelet",
-        id: "LmNoPqRstUVw",
+        id: "LmNocqRstUVw",
         quantity: 16,
         number:10,
         description: "Elevate your wrist with the Pegasus silver bracelet, adorned with lustrous pearls that embody timeless elegance and grace."
@@ -103,7 +103,7 @@ const products = [
         name: "Ursa",
         price: "9000",
         alt: "Diamond and platinum ring",
-        id: "wXyZaBcD1234",
+        id: "wXyZaBcD123A",
         quantity: 4,
         number:11,
         description: "The Ursa platinum ring sparkles with diamonds, symbolizing strength and enduring love in a piece of exquisite craftsmanship."
@@ -123,7 +123,7 @@ const products = [
         name: "Pavo",
         price: "18500",
         alt: "Gold ring, earrings, and bracelet",
-        id: "vVsfgzZKsoxP",
+        id: "v3sfgzZKsoxP",
         quantity: 5,
         number:13,
         description: "Indulge in opulence with the Pavo gold set, including a ring, earrings, and bracelet, creating a harmonious ensemble of elegance."
@@ -163,7 +163,7 @@ const products = [
         name: "Perseus",
         price: "17500",
         alt: "Emerald and silver ring",
-        id: "LmNoPqRstUVw",
+        id: "LmNoaqRstUVw",
         quantity: 10,
         number: 20,
         number:17,
@@ -194,7 +194,7 @@ const products = [
         name: "Leo Minor",
         price: "15500",
         alt: "Sapphire and white gold earrings",
-        id: "LmNoPqRstUVw",
+        id: "LmNpPqRstUVw",
         quantity: 7,
         number:20,
         description: "Embrace understated luxury with the Leo Minor white gold earrings, featuring sapphires that evoke a sense of celestial elegance."
@@ -214,7 +214,7 @@ const products = [
         name: "Scorpius",
         price: "14500",
         alt: "Opal and silver ring",
-        id: "wXyZaBcD1234",
+        id: "wXyZaBcD123b",
         quantity: 11,
         number:22,
         description: "Captivate with the Scorpius silver ring, showcasing a stunning opal that mesmerizes with its ever-changing hues and ethereal beauty."
@@ -254,7 +254,7 @@ const products = [
         name: "Hydra",
         price: "8000",
         alt: "Sapphire and silver pendant",
-        id: "LmNoPqRstUVw",
+        id: "LmNoPqRetUVw",
         quantity: 9,
         number:26,
         description: "Dive into elegance with the Hydra silver pendant, adorned with a captivating sapphire that mirrors the depths of the celestial sea."
@@ -264,7 +264,7 @@ const products = [
         name: "Auriga",
         price: "13500",
         alt: "Pearl and rose gold bracelet",
-        id: "gHwXyZaBcD12",
+        id: "gHw8yZaBcD12",
         quantity: 4,
         number:27,
         description: "Wrap your wrist in the timeless beauty of the Auriga rose gold bracelet, featuring lustrous pearls that exude grace and sophistication."
@@ -284,7 +284,7 @@ const products = [
         name: "Scutum",
         price: "15500",
         alt: "Topaz and platinum necklace",
-        id: "jKlmNoPqRstU",
+        id: "jKlm7oPqRstU",
         quantity: 12,
         number:29,
         description: "Adorn your neck with the Scutum platinum necklace, featuring a captivating topaz that adds a touch of celestial brilliance to your style."
@@ -294,7 +294,7 @@ const products = [
         name: "Virgo",
         price: "16500",
         alt: "Opal and white gold pendant",
-        id: "wXyZaBcD1234",
+        id: "wXyZaBcD12a4",
         quantity: 5,
         number:30,
         description: "Elevate your look with the Virgo white gold pendant, showcasing a mesmerizing opal that reflects the beauty of celestial radiance."
@@ -324,7 +324,7 @@ const products = [
         name: "Gemini",
         price: "9500",
         alt: "Opal and silver ring",
-        id: "wXyZaBcD1234",
+        id: "wXyZaBcDa234",
         quantity: 14,
         number:5,
         number:33,

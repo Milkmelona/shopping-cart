@@ -35,20 +35,59 @@
 
         &.submit {
             background-color: #cb9d90;
-            padding-inline: 10px;
+            padding: 8px;
         }
     }
 
     &__wrapper {
         display: flex;
         gap: 10px;
+        margin-bottom: 30px;
 
     }
     &__input {
         flex-grow: 1;
+        
 
         @include breakpoint(sm, min){
             padding: 20px
+        }
+    }
+
+    &__results {
+        @include flexCenter(column, flex-start, center);
+        gap: 15px;
+
+        a {
+            text-decoration: none;
+        }
+        img {
+            width: 5rem;
+            height: 5rem;
+            @include breakpoint(md, min){
+                width: 6rem;
+                height: 6rem;
+            }
+        }
+        &-item {
+            @include flexCenter(row, center, flex-start);
+            gap: 20px;
+        }
+        &-text{
+            text-transform: uppercase;
+            @include flexCenter(column, center, center);
+            color: black;
+            font-size: 1.2rem;
+
+            @include breakpoint(sm, min){
+                @include flexCenter(row, center, space-between);
+                gap: 20px;
+                font-size: 1.3rem;
+            }
+
+            @include breakpoint(md, min){
+                font-size: 1.5rem;
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-import products from "../data/products";
+
 import bannerImg from "../assets/Products/products-banner-img.jpg"
 import bannerImgComp from "../assets/Compressed-Unsplash-Images/products-banner-img-min.jpg"
 import ProgressiveImage from "react-progressive-graceful-image";
