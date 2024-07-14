@@ -1,12 +1,12 @@
 
-import bannerImg from "../assets/Products/products-banner-img.jpg"
-import bannerImgComp from "../assets/Compressed-Unsplash-Images/products-banner-img-min.jpg"
+import bannerImg from "../../assets/Products/products-banner-img.jpg"
+import bannerImgComp from "../../assets/Compressed-Unsplash-Images/products-banner-img-min.jpg"
 import ProgressiveImage from "react-progressive-graceful-image";
-import "../styles/Shop.scss"
+import "../../styles/Shop.scss"
 import ReactPaginate from "react-paginate";
-import ProductItem from "../components/ProductItem";
-import  productInfo  from "../data/prodImages";
-import sortedValues from "../components/Sort";
+import ProductItem from "../ProductItem";
+import  productInfo  from "../../data/prodImages";
+import sortedValues from "../Sort";
 import { useState, useEffect } from "react";
 
 

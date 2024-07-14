@@ -1,11 +1,11 @@
 import { useContext} from "react";
-import CartContext from "../context/CartContext";
-import productInfo from "../data/prodImages"
-import getTotal from "../utils/getTotal";
+import CartContext from "../../context/CartContext";
+import productInfo from "../../data/prodImages";
+import getTotal from "../../utils/getTotal"
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
-import currencyFormat from "../utils/currencyFormat";
-import "../styles/Cart.scss";
+import currencyFormat from "../../utils/currencyFormat";
+import "../../styles/Cart.scss"
 
 function Cart(){
     const[cartItems, setCartItems] = useContext(CartContext);

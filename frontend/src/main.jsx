@@ -3,17 +3,17 @@ import ReactDOM from 'react-dom/client'
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './index.scss';
-import Homepage from './pages/Homepage'
+import Homepage from './components/pages/Homepage'
 import Header from './components/Header'
 import Footer from "../src/components/Footer"
 import HeaderSticky from './components/Header-sticky'
-import Collection from './pages/Collectionpage'
-import Shop from './pages/Shop'
-import Faqs from './pages/faqs'
-import About from './pages/About'
+import Collection from './components/pages/Collectionpage'
+import Shop from './components/pages/Shop';
+import Faqs from './components/pages/Faqs'
+import About from './components/pages/About'
 import ContextProvider from './context/ContextProvider';
-import ProductPage from './pages/Productpage';
-import Cart from './pages/Cart';
+import ProductPage from './components/pages/Productpage';
+import Cart from './components/pages/Cart';
 
 function MainRoutes(){
   const[IsSticky, setIsSticky] = useState(false)

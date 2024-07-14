@@ -1,11 +1,11 @@
 import React from "react";
 import { useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
-import productInfo from "../data/prodImages";
-import Imgwrapper from "../components/Imagewrapper";
-import CartContext from "../context/CartContext";
-import currencyFormat from "../utils/currencyFormat";
-import "../styles/productpage.scss";
+import productInfo from "../../data/prodImages";
+import Imgwrapper from "../../data/prodImages"
+import CartContext from "../../context/CartContext";
+import currencyFormat from "../../utils/currencyFormat";
+import "../../styles/productpage.scss";
 
 const emptyProduct = {
     name: "",

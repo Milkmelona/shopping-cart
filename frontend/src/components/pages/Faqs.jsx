@@ -1,10 +1,10 @@
 import React from "react";
-import Imgwrapper from "../components/Imagewrapper";
+import Imgwrapper from "../../components/Imagewrapper";
 import ProgressiveImage from "react-progressive-graceful-image";
-import img from "../assets/Unsplash Images/faqs-img.jpg";
-import imgComp from "../assets/Compressed-Unsplash-Images/faqs-img-min.jpg"
-import "../styles/faqs.scss"
-import FaqsItem from "../components/faqsItem";
+import img from "../../assets/Unsplash Images/faqs-img.jpg";
+import imgComp from "../../assets/Compressed-Unsplash-Images/faqs-img-min.jpg"
+import "../../styles/faqs.scss"
+import FaqsItem from "../../components/faqsItem";
 
 
 function Faqs(){    

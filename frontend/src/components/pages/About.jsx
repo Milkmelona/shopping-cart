@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/about.scss";
-import img1 from "../assets/Unsplash Images/about-img-1.jpg";
-import img2 from "../assets/Unsplash Images/about-img-2.jpg";
-import img1Comp from "../assets/Compressed-Unsplash-Images/about-img-1-min.jpg"
-import img2Comp from "../assets/Compressed-Unsplash-Images/about-img-2-min.jpg"
-import Imgwrapper from "../components/Imagewrapper";
+import "../../styles/about.scss";
+import img1 from "../../assets/Unsplash Images/about-img-1.jpg";
+import img2 from "../../assets/Unsplash Images/about-img-2.jpg";
+import img1Comp from "../../assets/Compressed-Unsplash-Images/about-img-1-min.jpg"
+import img2Comp from "../../assets/Compressed-Unsplash-Images/about-img-2-min.jpg"
+import Imgwrapper from "../../components/Imagewrapper";
 import ProgressiveImage from "react-progressive-graceful-image";
 import { Link } from "react-router-dom";
 
