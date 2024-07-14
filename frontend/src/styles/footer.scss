@@ -1,0 +1,142 @@
+@import './utils';
+
+.footer {
+    @include flexCenter(column, center, center);
+    width: 100%;
+    overflow-x: hidden;
+
+    &__emailForm {
+    @include flexCenter(column, center, center);
+    width: 100%;
+    background-image: url('../assets/Unsplash\ Images/email-form-img.jpg');
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(35px);
+    padding-block: 30px;
+
+        & h3 {
+            font-size: 1.3rem;
+            margin-top: 0;
+
+            @include breakpoint(sm, min){
+                font-size: 1.5rem;
+                margin-block: 0;
+            }
+        }
+        &-wrapper {
+            @include flexCenter(column, center, center);
+            gap: 20px;
+            font-size: 1.1rem;
+            text-align: center;
+
+            @include breakpoint(sm, min){
+                    font-size: 1.2rem;
+                    gap: 0;
+                    padding-inline: 15px;
+                }
+        
+            }
+
+        &-input {
+            @include flexCenter(column, center, center);
+
+            @include breakpoint(sm, min){
+                @include flexCenter(row, center, center);
+            }
+
+            & input {
+                font-size: 1rem;
+                border-radius: 8px;
+                height: 38px;
+                text-align: left;
+            }
+            }
+        
+        & img {   
+            overflow: hidden;
+            width: 100%;
+        }
+    }
+
+    &__info {
+        @include flexCenter(column-reverse, center, center);
+        
+        padding-block: 20px;
+        width: 100%;
+        
+        @include breakpoint(sm, min){
+            padding-block: 40px;
+        }
+
+        @include breakpoint(md, min){
+            @include flexCenter(row, center, center);
+        }
+
+        
+        &-left {
+            text-align: center;
+            width: 100%;
+            border-top: 1px solid black;
+            padding-top: 25px;
+
+            @include breakpoint(md, min){
+                border-top: none;
+                padding-top: 0;
+            }
+            & ul {
+                list-style-type: none;
+                @include flexCenter(row, center, center);
+                padding: 0;
+                margin: 0;
+
+                @include breakpoint(sm, min){
+                    gap: 10px;
+                }
+
+                @include breakpoint(md, min){
+                    gap: 10px;
+                    @include flexCenter(column, center, flex-start);
+                }
+            }
+        }
+        &-right {
+            @include flexCenter(column, center, center);
+            width: 100%;
+            gap: 15px;
+            margin-bottom: 40px;
+
+            @include breakpoint(md, min){
+                border-left: 1px solid black;
+            }
+
+            &img {
+                width: 50px;
+                height: 50px;
+            }
+
+            &-wrapper {
+                @include flexCenter(row, flex-start, center);
+                gap: 20px
+            }
+            & h3 {
+                margin: 8px 0;
+                text-transform: uppercase;
+                letter-spacing: 1;
+
+                @include breakpoint(sm, min){
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        &-contact {
+            @include flexCenter(column, center, space-between);
+            text-align: center;
+            height: 100%;
+            &-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

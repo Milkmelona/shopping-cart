@@ -1,0 +1,103 @@
+@import './utils';
+
+.pp {
+    @include flexCenter(column, center, center);
+    padding-inline: 20px;
+    padding-block: 50px;
+
+    @include breakpoint(sm, min) {
+        padding-inline: 50px;
+    }
+    
+    &__details {
+        @include breakpoint(md, min) {
+            @include flexCenter(row, center, center);
+            gap: 1.2em;
+        }
+    }
+
+    &__img-wrapper {
+        @include flexCenter(row, center, center);
+        border: 7px solid var(--color-grey-light-2);
+        width: 100%;
+        
+        img {
+        width: 100%;
+        transition: 300ms linear;
+        height: 300px;
+        object-fit: cover;  
+
+        @include breakpoint(lg, min) {
+            height: 350px;
+        }
+
+        @include breakpoint(xlg, min) {
+            height: 400px;
+        }
+    
+    
+    }}
+
+    &__wrapper {
+        @include flexCenter(column, center, center);
+        
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            letter-spacing: 1.1px;
+        }
+        &-text {
+            @include flexCenter(row, center, center);
+            gap: 20px;
+
+            h2 {
+                text-transform: uppercase;
+            }
+            h3 {
+                letter-spacing: 1.1px;
+            }
+
+            @include breakpoint(sm, min){
+                font-size: 1.2rem;
+            }
+        }
+
+        &-quantity {
+            @include flexCenter(row, center, center);
+            gap: 10px;
+            
+            label {
+                font-size: 1.15em;
+                text-transform: uppercase;
+            }
+            input {
+                padding: 5px;
+                width: 75px;
+            }
+        }
+
+        &-btn {
+            @include flexCenter(row, center, center);
+            margin-top: 20px;
+            gap: 20px;
+        } 
+    }
+
+    &__cart {
+        font-size: 1.3em;
+        padding: 15px 25px;
+        background-color: #cb9d90;
+
+        &:hover {
+            background-color: #FFC0CB;
+        }
+    }
+
+    &__favorite {
+        background: none;
+
+        &.active {
+            filter: invert(75%) sepia(7%) saturate(1285%) hue-rotate(302deg) brightness(105%) contrast(107%);
+        }
+    }
+}

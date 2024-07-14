@@ -1,0 +1,124 @@
+@import "./utils";
+
+.headerSticky {
+    @include flexCenter(row, center, space-between);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        padding: 20px 8px;
+        background-color: #cb9d90;
+
+        @include breakpoint(sm, min){
+            padding-block: 20px;
+        }
+        
+    &__list {
+        @include flexCenter(column, center, center);
+        position:absolute;
+        width: 100%;
+        margin: 0;
+        list-style-type: none;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #cb9d90;
+        font-size: 1.0rem;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        padding-left: 0;
+
+        &.row {
+            @include flexCenter(row, center, center);
+            padding: 0;
+            position: static;
+            transform: translateX(0);
+            gap: 10px;
+
+            @include breakpoint(md, min){
+                gap: 15px;
+            }
+    
+            @include breakpoint(lg, min){
+                gap: 20px;
+            }
+        }
+
+         a {
+            padding-block: 20px;
+            padding-left: 12px;
+            margin-inline: 14px;
+            border-bottom: 1px solid black;
+            width: 90%;
+
+            @include breakpoint(sm, min){
+                border: none;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                width: auto;
+                font-size: 1.3rem;
+            }
+
+            @include breakpoint(md, min){
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+
+    &__icons {
+        @include flexCenter(row, center, center);
+        gap: 3px;
+
+        @include breakpoint(sm, min){
+            gap: 2px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    &__icon {
+        filter: invert(0%) sepia(0%) saturate(0%) hue-rotate(56deg) brightness(96%) contrast(103%);
+        cursor: pointer;
+        background: none;   
+        padding: 0;
+
+        &.material-symbols-outlined {
+            font-size: 27px;
+
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+
+            @include breakpoint(sm, min){
+                width: 1.9rem;
+                height: 1.9rem;
+            }
+
+            @include breakpoint(lg, min){
+                padding-block: 0;
+                padding-inline: 3px;
+            }
+    
+
+        &.hidden {
+            display: none;
+        }
+
+        &.logo {
+            width: 3rem;
+            height: 3rem;
+
+            @include breakpoint(sm, min){
+                width: 3.3rem;
+                height: 3.3rem;
+            }
+        }
+    }
+
+}
