@@ -78,7 +78,8 @@ function HeaderSticky(){
             >
                 search
             </Link>
-            {isSmScrn ? 
+            {isSmScrn 
+            ? 
             <Link
             to="/"
             className="header__btn"
@@ -89,7 +90,7 @@ function HeaderSticky(){
                     className={"headerSticky__icon logo"}
                 />
             </Link>
-                :
+            :
             <Link
                 to="#"
                 className="headerSticky__icon menu material-symbols-outlined"

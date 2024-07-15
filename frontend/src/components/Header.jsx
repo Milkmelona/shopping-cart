@@ -45,7 +45,8 @@ return (
                 />
             </Link>
             <h1>Methuselah</h1>
-            {isMedScrn ?       
+            {isMedScrn 
+            ?       
             <div className="header__list flex">
             {HeaderPaths.map((path, index) => (
                 <Link
