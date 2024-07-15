@@ -3,7 +3,6 @@ import Flickity from "react-flickity-component";
 import ProgressiveImage from "react-progressive-graceful-image";
 import heroImages from "../data/heroData";
 import "../styles/hero.scss";
-import Buttons from "./Buttons";
 
 function Hero(){
     const flickityOptions = {
@@ -37,13 +36,7 @@ function Hero(){
                         <h3>{item.name}</h3>
                         <p>{item.desc}</p>
                     </div>
-                    <Buttons
-                    text = {"Shop Now"}
-                    color = {"#c4aeac"}
-                    fontSize ={21}
-                    type = {"button"}
-                    className = {"hero-item__wrapper-btn"}
-                    />
+                    <button className="hero-item__wrapper-btn">Shop Now</button>
                 </div>
             </div>
         ))}

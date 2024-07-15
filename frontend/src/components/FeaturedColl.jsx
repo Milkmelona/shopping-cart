@@ -4,7 +4,6 @@ import img1 from "../assets/Unsplash Images/featured-collection-img-1.jpg"
 import img1Comp from "../assets/Compressed-Unsplash-Images/featured-collection-img-1-min.jpg"
 import img2 from  "../assets/Unsplash Images/featured-collection-img-2.png"
 import img2Comp from  "../assets/Compressed-Unsplash-Images/featured-collection-img-2-min.png"
-import Button from "./Buttons";
 
 import Imgwrapper from "./Imagewrapper";
 import "../styles/featuredColl.scss"
@@ -56,14 +55,7 @@ function FeaturedCollection(){
                     )}
               </ProgressiveImage>
               </Imgwrapper>
-              <Button
-              text = {"Show Collection"}
-              color = {"#a1b4bf"}
-              hoverColor = {"#e2ac8d"}
-              fontSize = {20}
-              type={"button"}
-              className = {"fc_btn"}
-              />
+              <button className="fc_btn">Show Collection</button>
         </div>
 
         </section>

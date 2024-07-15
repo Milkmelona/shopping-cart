@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import HeaderIcon from "./HeaderButtons";
 import { useMediaQuery } from "react-responsive";
 import "../styles/headerSticky.scss"
 import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
-import NavBar from "./Navigation";
+import NavBar from "./PageNavigation";
 import { Link } from "react-router-dom";
+import logo from "../assets/methuselah-logo.svg";
+import { HeaderStickyLeftPaths} from "../data/HeaderNav";
 
 function HeaderSticky(){
 
@@ -33,70 +34,84 @@ function HeaderSticky(){
 
     return(
     <div className="headerSticky">
-    <div className="headerSticky__icons left">
-            <button
-                type= "button"
-                className="headerSticky__icon account material-symbols-outlined"
-                onClick={handleAccount}
+        <div className="headerSticky__icons left">
+        {HeaderStickyLeftPaths.map((path, index) => (
+            <Link
+                to={path.path}
+                className={path.className}
+                key={index}
+                onClick={
+                    path.name === 'search' 
+                        ? handleSearchBtn 
+                        : path.name === 'person' 
+                            ? handleAccount 
+                            : undefined
+                }
             >
-                person
-            </button>
-            <button
-                type= "button"
-                className="headerSticky__icon heart material-symbols-outlined"
-            >
-                favorite
-            </button>
-            <Link 
-            to="/cart" 
-            className="headerSticky__icon bag material-symbols-outlined">
-            local_mall
+            {path.name}
             </Link>
-     </div>
-     {isSmScrn ? <div className="headerSticky__list row">
-                <NavBar/>
-            </div> : <div className="headerSticky__logo">
-        <HeaderIcon
-            src={"../src/assets/methuselah-logo.svg"}
-            alt={"methuselah logo"}
-            btnClass={"headerSticky__icon logo"}
-        />
-        </div>}
-     <div className="headerSticky__icons right">
-            <button
-                type= "button"
+            ))
+        }
+        </div> 
+        {isSmScrn
+        ?
+        <NavBar/>
+        :
+        <div className="headerSticky__logo">
+            <Link
+                to="/"
+                className="header__btn"
+            >
+                <img
+                    src={logo} 
+                    alt={"Methuselah logo"}
+                    className={"headerSticky__icon logo"}
+                />
+            </Link>
+        </div>
+        }
+        <div className="headerSticky__icons right">
+            <Link
+                to="#"
                 className="headerSticky__icon search material-symbols-outlined"
                 onClick={handleSearchBtn}
             >
                 search
-            </button>
-        {isSmScrn ? <HeaderIcon
-            src={"../src/assets/methuselah-logo.svg"}
-            alt={"methuselah logo"}
-            btnClass={"headerSticky__icon logo"}
-        /> 
-            :
-            <button
-                type= "button"
+            </Link>
+            {isSmScrn ? 
+            <Link
+            to="/"
+            className="header__btn"
+            >
+                <img
+                    src={logo} 
+                    alt={"Methuselah logo"}
+                    className={"headerSticky__icon logo"}
+                />
+            </Link>
+                :
+            <Link
+                to="#"
                 className="headerSticky__icon menu material-symbols-outlined"
                 onClick = {handleDropDown}
             >
                 menu
-            </button>
+            </Link>
             }
-     </div>
-     {isMenuVisible && <div className="headerSticky__list">
-            <NavBar/>
+        </div>
+        {isMenuVisible && 
+            <div className="headerSticky__list">
+                <NavBar/>
             </div>}
-    {isSearchVisible && 
-        <Searchpanel
-        handleClick= {handleSearchBtn}/>
-        }
-    {isLogInVisible &&
+        {isSearchVisible && 
+            <Searchpanel
+            handleClick= {handleSearchBtn}/>
+            }
+        {isLogInVisible &&
             <LogIn
             handleClick={handleAccount}/>
-    }
-     </div> 
+        }
+    </div> 
     )
 }
 

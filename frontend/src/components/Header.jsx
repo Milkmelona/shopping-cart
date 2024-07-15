@@ -1,12 +1,13 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/header.scss"
-import HeaderIcon from "./HeaderButtons";
-import NavBar from "./Navigation";
+import NavBar from "./PageNavigation";
 import { useMediaQuery } from 'react-responsive';
 import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
+import logo from "../assets/methuselah-logo.svg";
 import { Link } from "react-router-dom";
+import { HeaderPaths } from "../data/HeaderNav";
 function Header(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);
@@ -33,96 +34,69 @@ function Header(){
 return (
     <div className="header">
         <div className="header__top">
-        <div className="header__logo">
-        <HeaderIcon
-            src={"../src/assets/methuselah-logo.svg"}
-            alt={"methuselah logo"}
-            btnClass={"header__icon logo"}
-        />
-        </div>
-        <h1 className={`header__title ${isMedScrn? 'medScr' : ''}`}>Methuselah</h1>
-        {isMedScrn ? <div className="header__list flex">
-            <button
-                type= "button"
-                className="header__icon search material-symbols-outlined"
-                onClick={handleSearchBtn}
-            >
-                search
-            </button>
-            <button
-                type= "button"
-                className="header__icon account material-symbols-outlined"
-                onClick={handleAccount}
-            >
-                person
-            </button>
-            <button
-                type= "button"
-                className="header__icon heart material-symbols-outlined"
-            >
-                favorite
-            </button>
             <Link
-                to="/cart"
-                className="header__icon bag material-symbols-outlined"
+                to="/"
+                className="header__btn"
             >
-                local_mall
+                <img
+                    src={logo} 
+                    alt={"Methuselah logo"}
+                    className={"header__icon logo"}
+                />
             </Link>
+            <h1>Methuselah</h1>
+            {isMedScrn ?       
+            <div className="header__list flex">
+            {HeaderPaths.map((path, index) => (
+                <Link
+                    to={path.path}
+                    className={path.className}
+                    key={index}
+                    onClick={
+                        path.name === 'search' 
+                            ? handleSearchBtn 
+                            : path.name === 'person' 
+                                ? handleAccount 
+                                : undefined
+                    }
+                >
+                {path.name}
+                </Link>
+            ))
+            }
+            </div>
+            : 
+            <div className="header__menu-wrapper">
+                <button
+                    className="header__icon menu material-symbols-outlined"
+                    onClick = {handleDropDown}
+                >
+                    menu
+                </button>
+                {isMenuVisible && 
+                <div className="header__list">
+                {HeaderPaths.map((path, index) => (
+                    <Link
+                        to={path.path}
+                        className={path.className}
+                        key={index}
+                        onClick={
+                            path.name === 'search' 
+                                ? handleSearchBtn 
+                                : path.name === 'person' 
+                                    ? handleAccount 
+                                    : undefined
+                        }
+                    >
+                    {path.name}
+                    </Link>
+                ))
+                }
+                </div>}
+            </div> 
+            }
         </div>
-        : 
-        <div className="header__menu-wrapper">
-        {/* <HeaderIcon
-            src={"../src/assets/menu.svg"}
-            alt={"menu"}
-            btnClass={"header__icon menu"}
-            onClick = {handleDropDown}
-        /> */}
-        <button
-                type= "button"
-                className="header__icon menu material-symbols-outlined"
-                onClick = {handleDropDown}
-            >
-                menu
-            </button>
-        {isMenuVisible && <div className="header__list">
-            {/* <HeaderIcon
-            src={"../src/assets/search.svg"} 
-            alt={"search"} 
-            btnClass={"header__icon search"}
-            /> */}
-            <button
-                type= "button"
-                className="header__icon material-symbols-outlined"
-                onClick={handleSearchBtn}
-            >
-                search
-            </button>
-            <button
-                type= "button"
-                className="header__icon account material-symbols-outlined"
-                onClick={handleAccount}
-            >
-                person
-            </button>
-            <button
-                type= "button"
-                className="header__icon heart material-symbols-outlined"
-            >
-                favorite
-            </button>
-            <Link
-                to="/cart"
-                className="header__icon bag material-symbols-outlined"
-            >
-                local_mall
-            </Link>
-        </div>}
-        </div> 
-        }
-        </div>
-        <div className="header__bottom">
-       <NavBar/>
-        </div>
+        <NavBar/>
         {isSearchVisible && 
             <Searchpanel
             handleClick= {handleSearchBtn}/>

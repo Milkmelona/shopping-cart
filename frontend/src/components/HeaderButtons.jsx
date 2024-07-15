@@ -11,13 +11,11 @@ function HeaderIcon({
         <button
                 type="button"
                 className="header__btn"
-                // onClick={toggleSearchView}
-                // data-testid="search-button"
                 >
                 <img
-                    src={src} // Replace with the actual path to your image file
+                    src={src} 
                     alt={alt}
-                    className={btnClass}// Apply any necessary styling classes
+                    className={btnClass}
                     onClick = {onClick}
                 />
         </button>

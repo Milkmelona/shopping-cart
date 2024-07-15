@@ -10,16 +10,16 @@ function NavBar(){
         exit={{ opacity: 0, y: -20 }}
         className="navBar"
     >
-         <ul className="navBar">
+      <ul>
+        <NavLink
+          to="/"
+        >
+          Home
+        </NavLink>
         <NavLink
           to="/shop"
         >
           Shop
-        </NavLink>
-        <NavLink
-          to="/collection"
-        >
-          Collection
         </NavLink>
         <NavLink
           to="/about"
@@ -32,7 +32,7 @@ function NavBar(){
         >
           FAQs
         </NavLink>
-    </ul>         
+      </ul>         
     </motion.nav>
     
     )
