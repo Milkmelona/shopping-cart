@@ -1,9 +1,5 @@
 import React from "react";
-import githubIcon from "../assets/github-icon.png"
 import "../styles/footer.scss"
-import Phone from "../assets/phone.svg"
-import Mail from "../assets/mail.svg"
-import Chat from "../assets/chat.svg"
 import Button from "./Buttons"
 
 function Footer(){
@@ -43,15 +39,21 @@ function Footer(){
                     <span>Got any concern? We are here to assist!</span>
                     <div className="footer__info-right-wrapper">
                         <div className="footer__info-contact">
-                            <img src= {Phone} alt="Phone logo" className="footer__info-contact-icon"/>
+                            <span className="material-symbols-outlined footer__info-contact-icon">
+                            call
+                            </span>
                             <span>(000)<br/>-SELAH</span>
                         </div>
                         <div className="footer__info-contact">
-                            <img src= {Mail} alt="Mail logo" className="footer__info-contact-icon"/>
+                            <span className="material-symbols-outlined footer__info-contact-icon">
+                            mail
+                            </span>
                             <span>support<br/>@methuselah.com</span>
                         </div>
                         <div className="footer__info-contact">
-                            <img src= {Chat} alt="Chat logo" className="footer__info-contact-icon"/>
+                            <span className="material-symbols-outlined footer__info-contact-icon">
+                            chat_bubble
+                            </span>
                             <span>Chat<br/>with us</span>
                         </div>
                     </div>

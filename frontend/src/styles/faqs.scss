@@ -8,7 +8,7 @@
     &__info-main {
         width: 90%;
         margin: 0 auto;
-        padding-block: 50px;
+        padding-block: 30px;
     }
     &__title {
         position: absolute;
@@ -21,6 +21,7 @@
         letter-spacing: 1.5px;
         font-size: 1.7rem;
         margin: 0;
+        font-family: "Fraunces", serif;
 
 
         @include breakpoint(sm, min){
@@ -59,7 +60,8 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin: 0;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
+            font-family: "Fraunces", serif;
          }
         
         @include breakpoint(sm, min){
@@ -84,6 +86,10 @@
         line-height: 1.5;
         letter-spacing: 1.3px;
 
+        p {
+            font-family: "Karla", sans-serif;
+        }
+
     }
     &__accordion {
         background: transparent;
@@ -99,6 +105,7 @@
 
         p {
             margin: 0;
+            font-family: "Karla", sans-serif;
         }
     }
 

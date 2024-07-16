@@ -3,7 +3,7 @@
 .desc {
     @include flexCenter(column, flex-start, center);
     padding-inline: 20px;
-    margin-block: 30px;
+    margin-block: 25px;
     
 
     @include breakpoint(sm, min){
@@ -11,12 +11,14 @@
         position: relative;
         left: 50%;
         transform: translate(-50%);
+        margin-block: 30px;
     }
 
     &__title {
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 1.2rem;
+        font-family: "Fraunces", serif;
 
         @include breakpoint(sm, min){
             font-size: 1.5rem;
@@ -51,6 +53,7 @@
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 1.2rem;
+            font-family: "Fraunces", serif;
 
             @include breakpoint(xlg, min){
                 font-size: 1.4rem;
@@ -60,6 +63,7 @@
         p {
             font-size: 1.1rem;
             letter-spacing: 1.5px;
+            font-family: "Karla", sans-serif;
 
             @include breakpoint(sm, min){
                 text-align: center;

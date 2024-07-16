@@ -11,12 +11,13 @@
     background-image: url('../assets/Unsplash\ Images/email-form-img.jpg');
     background-size: cover;
     background-position: center;
-    backdrop-filter: blur(35px);
     padding-block: 30px;
+    opacity: 0.9;
 
-        & h3 {
+        h3 {
             font-size: 1.3rem;
             margin-top: 0;
+            font-family: "Fraunces", serif;
 
             @include breakpoint(sm, min){
                 font-size: 1.5rem;
@@ -28,6 +29,10 @@
             gap: 20px;
             font-size: 1.1rem;
             text-align: center;
+
+            p {
+                font-family: "Karla", sans-serif;
+            }
 
             @include breakpoint(sm, min){
                     font-size: 1.2rem;
@@ -44,17 +49,24 @@
                 @include flexCenter(row, center, center);
             }
 
-            & input {
+            input {
                 font-size: 1rem;
                 border-radius: 8px;
-                height: 38px;
-                text-align: left;
+                padding: 12px 14px;
+                font-family: "Karla", sans-serif;
+                margin-right: 8px;
+                margin-bottom: 8px;
+
+                @include breakpoint(sm, min){
+                    margin-bottom: 0;
+                }
             }
+
+            button {
+                padding: 12px 12px;
+                font-size: 1rem;
+                font-family: "Karla", sans-serif;
             }
-        
-        & img {   
-            overflow: hidden;
-            width: 100%;
         }
     }
 
@@ -83,7 +95,8 @@
                 border-top: none;
                 padding-top: 0;
             }
-            & ul {
+            
+            ul {
                 list-style-type: none;
                 @include flexCenter(row, center, center);
                 padding: 0;
@@ -109,19 +122,15 @@
                 border-left: 1px solid black;
             }
 
-            &img {
-                width: 50px;
-                height: 50px;
-            }
-
             &-wrapper {
                 @include flexCenter(row, flex-start, center);
                 gap: 20px
             }
-            & h3 {
-                margin: 8px 0;
+            h3 {
+                margin:0;
                 text-transform: uppercase;
                 letter-spacing: 1;
+                font-family: "Karla", sans-serif;
 
                 @include breakpoint(sm, min){
                     font-size: 1.3rem;

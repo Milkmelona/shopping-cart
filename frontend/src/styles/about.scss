@@ -17,28 +17,30 @@
             text-transform: uppercase;
             letter-spacing: 3px;
             margin-bottom: 0;
+            font-family: "Fraunces", serif;
          }
 
          p {
             font-size: 1.1rem;
             text-align: justify;
             padding-inline: 15px;
+            font-family: "Karla", sans-serif;
 
             @include breakpoint(sm, min){
                 text-align: center;
-                font-size: 1.25rem;
+                // font-size: 1.1rem;
             }
          }
 
     }
 
     button {
-        padding: 15px 25px;
-        font-size: 1.4em;
+        padding: 12px 18px;
+        font-size: 1.2em;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        margin: 30px 0;
         background-color: #cb9d90;
+        font-family: "Karla", sans-serif;
     }
 
     &__info-container{
@@ -148,10 +150,10 @@
         }
 
         &-main {
-            @include flexCenter(column, center, center);
+            @include flexCenter(column, start, center);
 
             @include breakpoint(md, min){
-                @include flexCenter(row, center, center);
+                @include flexCenter(row, start, center);
             }
 
             ul {
@@ -161,6 +163,7 @@
 
                 h3 {
                     font-size: 1.3em;
+                    font-family: "Fraunces", serif;
                     @include breakpoint(sm, min){
                         font-size: 1.35rem;
                     }
@@ -169,6 +172,7 @@
                 li {
                     font-size: 1.1rem;
                     max-width: 260px;
+                    font-family: "Karla", sans-serif;
 
                     @include breakpoint(sm, min){
                         font-size: 1.15rem;

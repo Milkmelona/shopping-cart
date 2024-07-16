@@ -1,8 +1,6 @@
 import React from "react";
 import faqs from "../data/Faqs";
 import { useState } from "react";
-import max from "../assets/maximize.svg";
-import min from "../assets/minimize.svg";
 
 function FaqsItem({category}){
 
@@ -18,10 +16,15 @@ function FaqsItem({category}){
         <div className={`faqs__item ${faq.id === isActiveItem ? `active` : ""}`} key={faq.id}>
             <button className="faqs__accordion" onClick={() => handleClick(faq.id)}>
             <p>{faq.question}</p>
-            <img 
-            src= {faq.id === isActiveItem ? min : max} 
-            alt= {faq.id === isActiveItem ? "minimize button" : "minimize button"}
-            className="faqs__button"/> 
+            {faq.id === isActiveItem ?
+            <span class="material-symbols-outlined faqs__button">
+            add
+            </span>
+            :
+            <span class="material-symbols-outlined faqs__button">
+            remove
+            </span>            
+            }
             </button>
             {faq.id === isActiveItem &&(
             <div className="faqs__panel">
