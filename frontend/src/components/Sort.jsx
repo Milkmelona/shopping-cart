@@ -1,5 +1,5 @@
 
-import productInfo from "../data/prodImages";
+import productInfo from "../const/prodImages";
 
 
     const sortedValues = (setting) => { 

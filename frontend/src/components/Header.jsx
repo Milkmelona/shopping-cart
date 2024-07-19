@@ -7,7 +7,7 @@ import Searchpanel from "./Searchpanel";
 import LogIn from "./LogIn";
 import logo from "../assets/methuselah-logo.svg";
 import { Link } from "react-router-dom";
-import { HeaderPaths } from "../data/HeaderNav";
+import { HeaderPaths } from "../const/HeaderNav";
 function Header(){
 
     const[isMenuVisible, setIsMenuVisible] = useState(false);

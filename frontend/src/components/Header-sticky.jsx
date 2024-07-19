@@ -7,7 +7,7 @@ import LogIn from "./LogIn";
 import NavBar from "./PageNavigation";
 import { Link } from "react-router-dom";
 import logo from "../assets/methuselah-logo.svg";
-import { HeaderStickyLeftPaths} from "../data/HeaderNav";
+import { HeaderStickyLeftPaths} from "../const/HeaderNav";
 
 function HeaderSticky(){
 

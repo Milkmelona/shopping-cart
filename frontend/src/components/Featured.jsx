@@ -1,4 +1,4 @@
-import featuredImgs from "../data/featuredItems"
+import featuredImgs from "../const/featuredItems"
 import React from "react"
 import Flickity from "react-flickity-component";
 import ProgressiveImage from "react-progressive-graceful-image";

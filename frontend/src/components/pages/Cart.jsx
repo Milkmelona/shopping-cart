@@ -1,6 +1,6 @@
 import { useContext} from "react";
 import CartContext from "../../context/CartContext";
-import productInfo from "../../data/prodImages";
+import productInfo from "../../const/prodImages";
 import getTotal from "../../utils/getTotal"
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";

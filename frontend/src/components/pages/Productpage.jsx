@@ -1,8 +1,8 @@
 import React from "react";
 import { useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
-import productInfo from "../../data/prodImages";
-import Imgwrapper from "../../data/prodImages"
+import productInfo from "../../const/prodImages";
+import Imgwrapper from "../Imagewrapper";
 import CartContext from "../../context/CartContext";
 import currencyFormat from "../../utils/currencyFormat";
 import "../../styles/productpage.scss";
@@ -29,10 +29,8 @@ function ProductPage(){
 
     useEffect(() => {
         const item = productInfo.find((item)=> item.id === productId);
-
         setProduct(() => item || emptyProduct);
     }, [productId]);
-    
 
     function handleFavorite(){
         setIsFavorite(!isFavorite);
@@ -70,17 +68,16 @@ function ProductPage(){
             setCartItems(updatedItems);
         }
         else {
-        setCartItems(() => [
-            ...cartItems,
-            {id: product.id,
-             quantity: quantityToAdd, 
-             subtotal: subtotal
-            }
-        ]
+            setCartItems(() => [
+                ...cartItems,
+                {id: product.id,
+                quantity: quantityToAdd, 
+                subtotal: subtotal
+                }
+            ]
          )
       }
-      console.log(cartItems)
-}
+    }
 
     return (
         <main className="pp">

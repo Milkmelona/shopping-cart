@@ -5,7 +5,7 @@ import ProgressiveImage from "react-progressive-graceful-image";
 import "../../styles/Shop.scss"
 import ReactPaginate from "react-paginate";
 import ProductItem from "../ProductItem";
-import  productInfo  from "../../data/prodImages";
+import  productInfo  from "../../const/prodImages";
 import sortedValues from "../Sort";
 import { useState, useEffect } from "react";
 

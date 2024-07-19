@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "../styles/search.scss";
-import productInfo from "../data/prodImages";
+import productInfo from "../const/prodImages";
 
 import { useState} from "react";
 import { Link } from "react-router-dom";

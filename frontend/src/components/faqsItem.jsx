@@ -1,5 +1,5 @@
 import React from "react";
-import faqs from "../data/Faqs";
+import faqs from "../const/Faqs";
 import { useState } from "react";
 
 function FaqsItem({category}){

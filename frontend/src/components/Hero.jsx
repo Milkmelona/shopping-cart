@@ -1,7 +1,7 @@
 import React from "react";
 import Flickity from "react-flickity-component";
 import ProgressiveImage from "react-progressive-graceful-image";
-import heroImages from "../data/heroData";
+import heroImages from "../const/heroData";
 import "../styles/hero.scss";
 
 function Hero(){
