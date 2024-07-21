@@ -5,35 +5,32 @@ import getTotal from "../../utils/getTotal"
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 import currencyFormat from "../../utils/currencyFormat";
+import { useSelector, useDispatch } from 'react-redux';
 import "../../styles/Cart.scss"
+import { updateQuantity, deleteItem } from "../../actions/cartActions";
 
 function Cart(){
-    const[cartItems, setCartItems] = useContext(CartContext);
+    const cart = useSelector(state => state.cart);
+    const dispatch = useDispatch();
     const isMedScrn = useMediaQuery({query: '(min-width: 900px)'});
     
-
     function handleQuantity(product, value){
-
+        const id = product.id;
         const price = parseInt(product.price);
         const subtotal = value * price
 
-        const updatedProducts = cartItems.map((item)=> 
-            item.id === product.id
-            ? {...item, quantity: value, subtotal: subtotal}
-            : item
-            );
-
-        setCartItems(updatedProducts); 
+        dispatch(updateQuantity(id, value, subtotal));
     }
     
     function handleDelete(product){
-        setCartItems(()=> cartItems.filter((item)=> item.id !==product.id));
+        const id = product.id;
+        dispatch(deleteItem(id));
     }
 
     return(
         <main className="cart">
             <h3>My Shopping Cart</h3>
-            {cartItems.length === 0 && 
+            {cart.length === 0 && 
                 <div className="cart__empty">
                     <span>Your cart is empty &#128148;</span>
                     <Link to="/shop">
@@ -43,7 +40,7 @@ function Cart(){
                     </Link>
                 </div>
             }
-            {isMedScrn && cartItems.length !== 0 && (
+            {isMedScrn && cart.length !== 0 && (
                 <table>
                     <thead>
                         <tr>
@@ -55,7 +52,7 @@ function Cart(){
                         </tr>
                     </thead>
                     <tbody className="cart__container">
-            {cartItems.map((item) => {
+            {cart.map((item) => {
                 const product = productInfo.find((product)=> product.id === item.id);
                
                 return(
@@ -86,7 +83,7 @@ function Cart(){
                         </table>)}
                        {!isMedScrn && 
                        <div className="cart__container"> {
-                        cartItems.map((item) => {
+                        cart.map((item) => {
                         const product = productInfo.find((product)=> product.id === item.id);
                         
                         return(
@@ -121,7 +118,7 @@ function Cart(){
                         )})}
                        </div>
                        }
-            {cartItems.length !== 0 && <div className="cart__checkOut">
+            {cart.length !== 0 && <div className="cart__checkOut">
                 <span className="cart__checkOut-label">total</span>
                 <span className="cart__checkOut-total">{currencyFormat(getTotal())}</span>
                 <span className="cart__checkOut-text">Shipping and taxes computed at checkout</span>
