@@ -25,15 +25,12 @@ function LogIn({handleClick}){
     function handleSubmit(values){
       if(!isPWForgotten){
         if(values.firstName){
-          // handleRegistration(values);
-          console.log(values)
+          handleRegistration(values);
         }else{
-          // handleLogIn(values);
-          console.log(values)
+          handleLogIn(values);
         }
       }else{
-        // handleEmailVerification(values);
-        console.log(values)
+          handleEmailVerification(values);
       }
     }
 

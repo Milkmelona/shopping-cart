@@ -12,11 +12,18 @@ import About from './components/pages/About'
 import ContextProvider from './context/ContextProvider';
 import ProductPage from './components/pages/Productpage';
 import Cart from './components/pages/Cart';
+import { fetchCart } from './actions/cartActions';
+import { useDispatch } from 'react-redux';
+import userService from '../src/services/userService';
 
 function App(){
-  const[IsSticky, setIsSticky] = useState(false)
+  const[IsSticky, setIsSticky] = useState(false) 
+  const[user, setUser] = useState(null);
+  const dispatch = useDispatch();
 
     useEffect(() => {
+        logUser();
+        dispatch(fetchCart(user.id))
 
         const handleScroll = () => {
             if (window.pageYOffset > 0) {
@@ -32,6 +39,24 @@ function App(){
             window.removeEventListener("scroll", handleScroll)
         }
     }, [])
+
+    const logUser = async (data) => {
+      try {
+        const response = await userService.logUser(data);
+        setUser(response.data);
+      }catch(error){
+        console.error('Error fetching user', error);
+      }
+    }
+
+    const registerUser = async (data) => {
+      try {
+        const response = await userService.logUser(data);
+        setUser(response.data);
+      }catch(error){
+        console.error('Error fetching user', error);
+      }
+    }
 
   return (
         <ContextProvider>

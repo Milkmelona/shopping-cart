@@ -4,7 +4,13 @@ import {
 } from "../actions/types";
 
 const initialState = {
-    user: {}
+    user: {
+        id: null,
+        first_name:"",
+        last_name: "",
+        email: "",
+        password: ""
+    }
 };
 
 const userReducer = (state = initialState, action) =>{

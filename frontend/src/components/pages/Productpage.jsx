@@ -3,33 +3,22 @@ import { useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom";
 import productInfo from "../../const/prodImages";
 import Imgwrapper from "../Imagewrapper";
-import CartContext from "../../context/CartContext";
+import { useSelector, useDispatch } from 'react-redux';
 import currencyFormat from "../../utils/currencyFormat";
 import "../../styles/productpage.scss";
-
-const emptyProduct = {
-    name: "",
-    price: "",
-    alt: "",
-    id: "",
-    quantity: '',
-    number:'',
-    description: '',
-    image: '',
-    compressedImg: ''
-}
+import {updateQuantity, getItem, addItem} from "../../actions/cartActions"
 
 function ProductPage(){
+    const cart = useSelector(state => state.cart);
+    const dispatch = useDispatch();
     const[isFavorite, setIsFavorite] = useState(false);
-    const[product, setProduct] = useState(emptyProduct);
     const[inCart, setInCart] = useState(false);
-    const[cartItems, setCartItems] = useContext(CartContext);
     const[selectedQuantity, setSelectedQuantity] = useState(0);
+    const product = useSelector(state => state.item);
     const {productId} = useParams();
 
     useEffect(() => {
-        const item = productInfo.find((item)=> item.id === productId);
-        setProduct(() => item || emptyProduct);
+        dispatch(getItem(productId));
     }, [productId]);
 
     function handleFavorite(){
@@ -43,7 +32,7 @@ function ProductPage(){
 
     useEffect(() => {
         setInCart(() => {
-            for (const item of cartItems) {
+            for (const item of cart) {
                 if (item.id === productId) {
                   return true;
                 }
@@ -51,32 +40,27 @@ function ProductPage(){
               return false;
         }
         ) 
-    }, [cartItems, productId]);
+    }, [cart, productId]);
     
 
     function handleCart(){
         const quantityToAdd = parseInt(selectedQuantity);
         const price = parseInt(product.price);
-        const subtotal = quantityToAdd * price
+        const subtotal = quantityToAdd * price;
 
         if (inCart) {
-            const updatedItems = cartItems.map((item) => 
-            item.id === productId
-                ? {...item, quantity: item.quantity + quantityToAdd, subtotal: item.subtotal + subtotal}
-                : item
-            );
-            setCartItems(updatedItems);
+            const itemInCart = cart.find((item)=> item.id === productId);
+            const value = itemInCart.quantity + quantityToAdd
+            dispatch(updateQuantity(id, value, subtotal));
         }
         else {
-            setCartItems(() => [
-                ...cartItems,
+            const product =
                 {id: product.id,
                 quantity: quantityToAdd, 
                 subtotal: subtotal
                 }
-            ]
-         )
-      }
+            dispatch(addItem(product))
+        }
     }
 
     return (

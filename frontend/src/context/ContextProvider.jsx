@@ -1,20 +1,16 @@
 import { useEffect, useState, useMemo } from "react";
-import CartContext from "./CartContext";
+import Context from "./Context";
 import PropTypes from 'prop-types';
+import { useSelector } from "react-redux";
 
 function ContextProvider({children}){
+    const cart = useSelector(state => state.cart)
+    const user = useSelector(state => state.user)
 
-    const[cart, setCart] = useState(JSON.parse(localStorage.getItem('myCart')) || []);
-
-    const value = useMemo(()=> [cart, setCart], [cart]);
-
-    useEffect(()=>{
-        localStorage.setItem('myCart', JSON.stringify(cart), [cart]);
-    })
+    const value = useMemo(()=> ({user, cart}), [user, cart]);
 
     return(
-        <CartContext.Provider value={value}>{children}</CartContext.Provider>
-
+        <Context.Provider value={value}>{children}</Context.Provider>
     )
 }
 

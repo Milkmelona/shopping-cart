@@ -7,7 +7,18 @@ import {
 } from "../actions/types";
 
 const initialState = {
-    cart: []
+    cart: [],
+    item: {
+        name: "",
+        price: "",
+        alt: "",
+        id: "",
+        quantity: '',
+        number:'',
+        description: '',
+        image: '',
+        compressedImg: ''
+    },
 };
 
 const cartReducer = (state = initialState, action) =>{
@@ -20,7 +31,10 @@ const cartReducer = (state = initialState, action) =>{
                 cart: payload
             };
         case GET_ITEM:
-            return payload;
+            return {
+                ...state,
+                item: payload
+            }
         case ADD_TO_CART:
             return{
                 ...state,
@@ -34,7 +48,7 @@ const cartReducer = (state = initialState, action) =>{
         case UPDATE_QUANTITY:
             return{
                 ...state,
-                cart: state.cart.map((item)=> item.id === payload.id ? {...item, quantity: payload.quantity} : item)
+                cart: state.cart.map((item)=> item.id === payload.id ? {...item, quantity: payload.quantity, subtotal: payload.subtotal} : item)
             };
         default:
             return state;
